@@ -1,0 +1,55 @@
+### IntelliJ IDEA ###
+.idea/
+*.iml
+out/
+
+# Si utilisation de modules
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Java ###
+*.class
+*.log
+*.jar
+*.war
+*.ear
+
+# Fichiers générés
+hs_err_pid*
+replay_pid*
+
+### Build tools ###
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Maven
+target/
+
+### Kotlin ###
+.kotlin/
+
+### Eclipse (au cas où le projet est ouvert ailleurs) ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### OS ###
+.DS_Store
+Thumbs.db
