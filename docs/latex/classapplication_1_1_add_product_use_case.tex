@@ -1,0 +1,93 @@
+\doxysection{Référence de la classe application.\+Add\+Product\+Use\+Case}
+\hypertarget{classapplication_1_1_add_product_use_case}{}\label{classapplication_1_1_add_product_use_case}\index{application.AddProductUseCase@{application.AddProductUseCase}}
+
+
+Use case responsable de l\textquotesingle{}ajout d\textquotesingle{}un produit dans le stock.  
+
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classapplication_1_1_add_product_use_case_afd57b56bf7083c65806b836c0bc31d10}{Add\+Product\+Use\+Case}} (\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}} product\+Repository)
+\begin{DoxyCompactList}\small\item\em Construit le cas d\textquotesingle{}usage d\textquotesingle{}ajout de produit avec le dépôt spécifié. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classapplication_1_1_add_product_use_case_a8701179ffffe5aa119971baeda93e31a}{execute}} (\mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} product)
+\begin{DoxyCompactList}\small\item\em Ajoute un produit au stock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Use case responsable de l\textquotesingle{}ajout d\textquotesingle{}un produit dans le stock. 
+
+Si un produit avec le même identifiant existe déjà dans le référentiel, son stock est incrémenté et son prix mis à jour. Le nom, la marque et la gamme d\textquotesingle{}origine sont conservés.
+
+Cette logique assure une unicité forte sur l\textquotesingle{}identifiant produit, en cohérence avec la gestion automatique des identifiants côté infrastructure.
+
+Cette classe fait partie de la couche application et dépend d\textquotesingle{}un port {\ttfamily \doxylink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}}.
+
+\begin{DoxyAuthor}{Auteur}
+Lucas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+2 
+\end{DoxyVersion}
+
+
+\label{doc-constructors}
+\Hypertarget{classapplication_1_1_add_product_use_case_doc-constructors}
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classapplication_1_1_add_product_use_case_afd57b56bf7083c65806b836c0bc31d10}\index{application.AddProductUseCase@{application.AddProductUseCase}!AddProductUseCase@{AddProductUseCase}}
+\index{AddProductUseCase@{AddProductUseCase}!application.AddProductUseCase@{application.AddProductUseCase}}
+\doxysubsubsection{\texorpdfstring{AddProductUseCase()}{AddProductUseCase()}}
+{\footnotesize\ttfamily \label{classapplication_1_1_add_product_use_case_afd57b56bf7083c65806b836c0bc31d10} 
+application.\+Add\+Product\+Use\+Case.\+Add\+Product\+Use\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}}}]{product\+Repository}{}\end{DoxyParamCaption})}
+
+
+
+Construit le cas d\textquotesingle{}usage d\textquotesingle{}ajout de produit avec le dépôt spécifié. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em product\+Repository} & le dépôt de persistance des produits \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classapplication_1_1_add_product_use_case_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classapplication_1_1_add_product_use_case_a8701179ffffe5aa119971baeda93e31a}\index{application.AddProductUseCase@{application.AddProductUseCase}!execute@{execute}}
+\index{execute@{execute}!application.AddProductUseCase@{application.AddProductUseCase}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{classapplication_1_1_add_product_use_case_a8701179ffffe5aa119971baeda93e31a} 
+void application.\+Add\+Product\+Use\+Case.\+execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}}}]{product}{}\end{DoxyParamCaption})}
+
+
+
+Ajoute un produit au stock. 
+
+Si l\textquotesingle{}identifiant du produit existe déjà \+: le stock existant est incrémenté le prix est mis à jour avec la nouvelle valeur le nom, la marque et la gamme existants sont conservés
+
+Sinon, le produit est inséré tel quel.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em product} & le produit à enregistrer ou mettre à jour \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & si le produit est nul ou invalide \\
+\hline
+\end{DoxyExceptions}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapplication_1_1_add_product_use_case_a8701179ffffe5aa119971baeda93e31a_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/application/\mbox{\hyperlink{_add_product_use_case_8java}{Add\+Product\+Use\+Case.\+java}}\end{DoxyCompactItemize}

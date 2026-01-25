@@ -1,0 +1,75 @@
+\doxysection{Référence de la classe application.\+Search\+Product\+Use\+Case}
+\hypertarget{classapplication_1_1_search_product_use_case}{}\label{classapplication_1_1_search_product_use_case}\index{application.SearchProductUseCase@{application.SearchProductUseCase}}
+
+
+Cas d\textquotesingle{}usage \+: Rechercher des produits dans le stock.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{enumapplication_1_1_search_product_use_case_1_1_mode}{Mode}}
+\begin{DoxyCompactList}\small\item\em Modes de recherche disponibles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classapplication_1_1_search_product_use_case_ac5ebb8c69765111942dcc9a9fc732b7e}{Search\+Product\+Use\+Case}} (\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}} product\+Repository)
+\item 
+List$<$ \mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} $>$ \mbox{\hyperlink{classapplication_1_1_search_product_use_case_aea9263b9de2f20cfd6b8a6a204df9044}{execute}} (String keyword, \mbox{\hyperlink{enumapplication_1_1_search_product_use_case_1_1_mode}{Mode}} mode)
+\begin{DoxyCompactList}\small\item\em Recherche les produits selon le mode spécifié. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Cas d\textquotesingle{}usage \+: Rechercher des produits dans le stock. 
+
+Permet une recherche ciblée selon l\textquotesingle{}identifiant, le nom ou les deux. Recherche insensible à la casse et robuste aux chaînes vides.
+
+\begin{DoxyAuthor}{Auteur}
+Lucas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+2 
+\end{DoxyVersion}
+
+
+\label{doc-constructors}
+\Hypertarget{classapplication_1_1_search_product_use_case_doc-constructors}
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classapplication_1_1_search_product_use_case_ac5ebb8c69765111942dcc9a9fc732b7e}\index{application.SearchProductUseCase@{application.SearchProductUseCase}!SearchProductUseCase@{SearchProductUseCase}}
+\index{SearchProductUseCase@{SearchProductUseCase}!application.SearchProductUseCase@{application.SearchProductUseCase}}
+\doxysubsubsection{\texorpdfstring{SearchProductUseCase()}{SearchProductUseCase()}}
+{\footnotesize\ttfamily \label{classapplication_1_1_search_product_use_case_ac5ebb8c69765111942dcc9a9fc732b7e} 
+application.\+Search\+Product\+Use\+Case.\+Search\+Product\+Use\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}}}]{product\+Repository}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classapplication_1_1_search_product_use_case_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classapplication_1_1_search_product_use_case_aea9263b9de2f20cfd6b8a6a204df9044}\index{application.SearchProductUseCase@{application.SearchProductUseCase}!execute@{execute}}
+\index{execute@{execute}!application.SearchProductUseCase@{application.SearchProductUseCase}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{classapplication_1_1_search_product_use_case_aea9263b9de2f20cfd6b8a6a204df9044} 
+List$<$ \mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} $>$ application.\+Search\+Product\+Use\+Case.\+execute (\begin{DoxyParamCaption}\item[{String}]{keyword}{, }\item[{\mbox{\hyperlink{enumapplication_1_1_search_product_use_case_1_1_mode}{Mode}}}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+Recherche les produits selon le mode spécifié. 
+
+Si aucun mot-\/clé valide n\textquotesingle{}est fourni, retourne l\textquotesingle{}intégralité des produits.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em keyword} & Mot-\/clé utilisé pour filtrer les produits \\
+\hline
+{\em mode} & \doxylink{enumapplication_1_1_search_product_use_case_1_1_mode}{Mode} de recherche (ID, NAME ou BOTH) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Liste filtrée des produits correspondant au critère 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/application/\mbox{\hyperlink{_search_product_use_case_8java}{Search\+Product\+Use\+Case.\+java}}\end{DoxyCompactItemize}

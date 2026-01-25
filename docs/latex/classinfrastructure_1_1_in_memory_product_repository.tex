@@ -1,0 +1,198 @@
+\doxysection{Référence de la classe infrastructure.\+In\+Memory\+Product\+Repository}
+\hypertarget{classinfrastructure_1_1_in_memory_product_repository}{}\label{classinfrastructure_1_1_in_memory_product_repository}\index{infrastructure.InMemoryProductRepository@{infrastructure.InMemoryProductRepository}}
+
+
+Implémentation en mémoire de l\textquotesingle{}interface {\ttfamily \doxylink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}}.  
+
+
+
+
+Graphe d\textquotesingle{}héritage de infrastructure.\+In\+Memory\+Product\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classinfrastructure_1_1_in_memory_product_repository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de infrastructure.\+In\+Memory\+Product\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classinfrastructure_1_1_in_memory_product_repository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classinfrastructure_1_1_in_memory_product_repository_a86e6c9f32e3b80b33abe9696e03eaa1d}{save}} (\mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} product)
+\begin{DoxyCompactList}\small\item\em Enregistre ou met à jour un produit dans le stockage. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classinfrastructure_1_1_in_memory_product_repository_a70a2c5309722ca5c33b605a3e59cf9e1}{exists\+By\+Id}} (String product\+Id)
+\begin{DoxyCompactList}\small\item\em Vérifie si un produit existe à partir de son identifiant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} \mbox{\hyperlink{classinfrastructure_1_1_in_memory_product_repository_ad5b786656bbccaad1a7dd0d72c0d7208}{find\+By\+Id}} (String product\+Id)
+\begin{DoxyCompactList}\small\item\em Recherche un produit par son identifiant. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} $>$ \mbox{\hyperlink{classinfrastructure_1_1_in_memory_product_repository_af81d44b94e198eb92708b74f849e74f9}{find\+All}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l’ensemble des produits enregistrés. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} $>$ \mbox{\hyperlink{classinfrastructure_1_1_in_memory_product_repository_a71f0adb72348fd01d59128634faec388}{search}} (String keyword)
+\begin{DoxyCompactList}\small\item\em Recherche les produits contenant le mot-\/clé dans leur nom. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classinfrastructure_1_1_in_memory_product_repository_ac485fbbdaca39c79176fb51cbbdeca43}{delete\+By\+Id}} (String product\+Id)
+\begin{DoxyCompactList}\small\item\em Supprime un produit du stockage à partir de son identifiant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implémentation en mémoire de l\textquotesingle{}interface {\ttfamily \doxylink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}}. 
+
+Cette classe fournit une solution de persistance temporaire, idéale pour les phases de test, de prototypage ou d\textquotesingle{}exécution sans base de données.
+
+Les données sont stockées dans une Map et sont perdues à l’arrêt de l’application.
+
+\begin{DoxyAuthor}{Auteur}
+Lucas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+
+
+\label{doc-func-members}
+\Hypertarget{classinfrastructure_1_1_in_memory_product_repository_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classinfrastructure_1_1_in_memory_product_repository_ac485fbbdaca39c79176fb51cbbdeca43}\index{infrastructure.InMemoryProductRepository@{infrastructure.InMemoryProductRepository}!deleteById@{deleteById}}
+\index{deleteById@{deleteById}!infrastructure.InMemoryProductRepository@{infrastructure.InMemoryProductRepository}}
+\doxysubsubsection{\texorpdfstring{deleteById()}{deleteById()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_in_memory_product_repository_ac485fbbdaca39c79176fb51cbbdeca43} 
+void infrastructure.\+In\+Memory\+Product\+Repository.\+delete\+By\+Id (\begin{DoxyParamCaption}\item[{String}]{product\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Supprime un produit du stockage à partir de son identifiant. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em product\+Id} & identifiant du produit à supprimer \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository_a7a0cb541bb0ffb8880f8ecb2f66caf6e}{application.\+ports.\+Product\+Repository}}.
+
+\Hypertarget{classinfrastructure_1_1_in_memory_product_repository_a70a2c5309722ca5c33b605a3e59cf9e1}\index{infrastructure.InMemoryProductRepository@{infrastructure.InMemoryProductRepository}!existsById@{existsById}}
+\index{existsById@{existsById}!infrastructure.InMemoryProductRepository@{infrastructure.InMemoryProductRepository}}
+\doxysubsubsection{\texorpdfstring{existsById()}{existsById()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_in_memory_product_repository_a70a2c5309722ca5c33b605a3e59cf9e1} 
+boolean infrastructure.\+In\+Memory\+Product\+Repository.\+exists\+By\+Id (\begin{DoxyParamCaption}\item[{String}]{product\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Vérifie si un produit existe à partir de son identifiant. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em product\+Id} & identifiant du produit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le produit existe, false sinon 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository_ac75696af365abea42a16d0b21d78a8cc}{application.\+ports.\+Product\+Repository}}.
+
+\Hypertarget{classinfrastructure_1_1_in_memory_product_repository_af81d44b94e198eb92708b74f849e74f9}\index{infrastructure.InMemoryProductRepository@{infrastructure.InMemoryProductRepository}!findAll@{findAll}}
+\index{findAll@{findAll}!infrastructure.InMemoryProductRepository@{infrastructure.InMemoryProductRepository}}
+\doxysubsubsection{\texorpdfstring{findAll()}{findAll()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_in_memory_product_repository_af81d44b94e198eb92708b74f849e74f9} 
+List$<$ \mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} $>$ infrastructure.\+In\+Memory\+Product\+Repository.\+find\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retourne l’ensemble des produits enregistrés. 
+
+\begin{DoxyReturn}{Renvoie}
+liste de tous les produits 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository_a2709ec2cd6923f27800d9b35ad523791}{application.\+ports.\+Product\+Repository}}.
+
+\Hypertarget{classinfrastructure_1_1_in_memory_product_repository_ad5b786656bbccaad1a7dd0d72c0d7208}\index{infrastructure.InMemoryProductRepository@{infrastructure.InMemoryProductRepository}!findById@{findById}}
+\index{findById@{findById}!infrastructure.InMemoryProductRepository@{infrastructure.InMemoryProductRepository}}
+\doxysubsubsection{\texorpdfstring{findById()}{findById()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_in_memory_product_repository_ad5b786656bbccaad1a7dd0d72c0d7208} 
+\mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} infrastructure.\+In\+Memory\+Product\+Repository.\+find\+By\+Id (\begin{DoxyParamCaption}\item[{String}]{product\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Recherche un produit par son identifiant. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em product\+Id} & identifiant du produit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+le produit correspondant, ou null si absent 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository_a15334bb0d4500f7be8c55af6c2955a96}{application.\+ports.\+Product\+Repository}}.
+
+\Hypertarget{classinfrastructure_1_1_in_memory_product_repository_a86e6c9f32e3b80b33abe9696e03eaa1d}\index{infrastructure.InMemoryProductRepository@{infrastructure.InMemoryProductRepository}!save@{save}}
+\index{save@{save}!infrastructure.InMemoryProductRepository@{infrastructure.InMemoryProductRepository}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_in_memory_product_repository_a86e6c9f32e3b80b33abe9696e03eaa1d} 
+void infrastructure.\+In\+Memory\+Product\+Repository.\+save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}}}]{product}{}\end{DoxyParamCaption})}
+
+
+
+Enregistre ou met à jour un produit dans le stockage. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em product} & produit à sauvegarder \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository_a8e7c53497f3550e8175e75cbb2809e11}{application.\+ports.\+Product\+Repository}}.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classinfrastructure_1_1_in_memory_product_repository_a86e6c9f32e3b80b33abe9696e03eaa1d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classinfrastructure_1_1_in_memory_product_repository_a71f0adb72348fd01d59128634faec388}\index{infrastructure.InMemoryProductRepository@{infrastructure.InMemoryProductRepository}!search@{search}}
+\index{search@{search}!infrastructure.InMemoryProductRepository@{infrastructure.InMemoryProductRepository}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_in_memory_product_repository_a71f0adb72348fd01d59128634faec388} 
+List$<$ \mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} $>$ infrastructure.\+In\+Memory\+Product\+Repository.\+search (\begin{DoxyParamCaption}\item[{String}]{keyword}{}\end{DoxyParamCaption})}
+
+
+
+Recherche les produits contenant le mot-\/clé dans leur nom. 
+
+La recherche est insensible à la casse.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em keyword} & mot-\/clé à rechercher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+liste des produits correspondants 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository_ae4c3256b18143c368298ed0bd2db8ea0}{application.\+ports.\+Product\+Repository}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/infrastructure/\mbox{\hyperlink{_in_memory_product_repository_8java}{In\+Memory\+Product\+Repository.\+java}}\end{DoxyCompactItemize}

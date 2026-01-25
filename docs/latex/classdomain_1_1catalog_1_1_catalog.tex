@@ -1,0 +1,183 @@
+\doxysection{Référence de la classe domain.\+catalog.\+Catalog}
+\hypertarget{classdomain_1_1catalog_1_1_catalog}{}\label{classdomain_1_1catalog_1_1_catalog}\index{domain.catalog.Catalog@{domain.catalog.Catalog}}
+
+
+Fournit un registre centralisé pour la gestion des marques ({\ttfamily \doxylink{classdomain_1_1catalog_1_1_brand}{Brand}}) et des gammes de produits ({\ttfamily \doxylink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}}).  
+
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} \mbox{\hyperlink{classdomain_1_1catalog_1_1_catalog_a787ad5c2d4d122b9a2986725a4d2631f}{create\+Brand}} (String id, String name)
+\begin{DoxyCompactList}\small\item\em Crée une marque si elle n\textquotesingle{}existe pas encore dans le registre. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} \mbox{\hyperlink{classdomain_1_1catalog_1_1_catalog_a8b116b141e8055b7004aec91d2696cf7}{create\+Product\+Line}} (String line\+Id, String name, \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} brand)
+\begin{DoxyCompactList}\small\item\em Crée une gamme de produits rattachée à une marque si elle n\textquotesingle{}existe pas déjà. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} $>$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_catalog_aac66cb98fc8b57e5613dedcfb2530ad1}{get\+All\+Brands}} ()
+\begin{DoxyCompactList}\small\item\em Retourne toutes les marques actuellement enregistrées dans le catalogue. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} $>$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_catalog_a72bef5071a9fdad24e985e7b2e72376a}{get\+All\+Product\+Lines}} ()
+\begin{DoxyCompactList}\small\item\em Retourne toutes les gammes de produits enregistrées. \end{DoxyCompactList}\item 
+Optional$<$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} $>$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_catalog_aa165acd956800084c2ff1fdc2baff2d4}{find\+Brand\+By\+Id}} (String id)
+\begin{DoxyCompactList}\small\item\em Recherche une marque à partir de son identifiant. \end{DoxyCompactList}\item 
+Optional$<$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} $>$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_catalog_a5bb1eb9c9aef963eea144825ec1d4d82}{find\+Product\+Line\+By\+Id}} (String id)
+\begin{DoxyCompactList}\small\item\em Recherche une gamme à partir de son identifiant. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} $>$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_catalog_af157dc06dbb9b227435f338ad2811245}{find\+Lines\+By\+Brand}} (\mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} brand)
+\begin{DoxyCompactList}\small\item\em Retourne toutes les gammes associées à une marque donnée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fournit un registre centralisé pour la gestion des marques ({\ttfamily \doxylink{classdomain_1_1catalog_1_1_brand}{Brand}}) et des gammes de produits ({\ttfamily \doxylink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}}). 
+
+Ce composant encapsule la logique de création, d\textquotesingle{}accès et de regroupement des entités métier liées au catalogue produit. 
+
+\begin{DoxyAuthor}{Auteur}
+Lucas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+2 
+\end{DoxyVersion}
+
+
+\label{doc-func-members}
+\Hypertarget{classdomain_1_1catalog_1_1_catalog_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classdomain_1_1catalog_1_1_catalog_a787ad5c2d4d122b9a2986725a4d2631f}\index{domain.catalog.Catalog@{domain.catalog.Catalog}!createBrand@{createBrand}}
+\index{createBrand@{createBrand}!domain.catalog.Catalog@{domain.catalog.Catalog}}
+\doxysubsubsection{\texorpdfstring{createBrand()}{createBrand()}}
+{\footnotesize\ttfamily \label{classdomain_1_1catalog_1_1_catalog_a787ad5c2d4d122b9a2986725a4d2631f} 
+\mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} domain.\+catalog.\+Catalog.\+create\+Brand (\begin{DoxyParamCaption}\item[{String}]{id}{, }\item[{String}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Crée une marque si elle n\textquotesingle{}existe pas encore dans le registre. 
+
+Deux marques avec le même identifiant sont considérées comme identiques. Cette méthode est idempotente.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & identifiant unique de la marque \\
+\hline
+{\em name} & nom lisible de la marque \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la marque existante ou nouvellement créée 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & si l\textquotesingle{}identifiant est nul \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classdomain_1_1catalog_1_1_catalog_a8b116b141e8055b7004aec91d2696cf7}\index{domain.catalog.Catalog@{domain.catalog.Catalog}!createProductLine@{createProductLine}}
+\index{createProductLine@{createProductLine}!domain.catalog.Catalog@{domain.catalog.Catalog}}
+\doxysubsubsection{\texorpdfstring{createProductLine()}{createProductLine()}}
+{\footnotesize\ttfamily \label{classdomain_1_1catalog_1_1_catalog_a8b116b141e8055b7004aec91d2696cf7} 
+\mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} domain.\+catalog.\+Catalog.\+create\+Product\+Line (\begin{DoxyParamCaption}\item[{String}]{line\+Id}{, }\item[{String}]{name}{, }\item[{\mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}}}]{brand}{}\end{DoxyParamCaption})}
+
+
+
+Crée une gamme de produits rattachée à une marque si elle n\textquotesingle{}existe pas déjà. 
+
+Deux gammes avec le même identifiant sont considérées comme identiques. Cette méthode est idempotente.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em line\+Id} & identifiant unique de la gamme \\
+\hline
+{\em name} & nom de la gamme \\
+\hline
+{\em brand} & marque associée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la gamme existante ou nouvellement créée 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & si l\textquotesingle{}identifiant ou la marque sont nuls \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classdomain_1_1catalog_1_1_catalog_aa165acd956800084c2ff1fdc2baff2d4}\index{domain.catalog.Catalog@{domain.catalog.Catalog}!findBrandById@{findBrandById}}
+\index{findBrandById@{findBrandById}!domain.catalog.Catalog@{domain.catalog.Catalog}}
+\doxysubsubsection{\texorpdfstring{findBrandById()}{findBrandById()}}
+{\footnotesize\ttfamily \label{classdomain_1_1catalog_1_1_catalog_aa165acd956800084c2ff1fdc2baff2d4} 
+Optional$<$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} $>$ domain.\+catalog.\+Catalog.\+find\+Brand\+By\+Id (\begin{DoxyParamCaption}\item[{String}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Recherche une marque à partir de son identifiant. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & identifiant de la marque \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un Optional contenant la marque si elle est trouvée 
+\end{DoxyReturn}
+\Hypertarget{classdomain_1_1catalog_1_1_catalog_af157dc06dbb9b227435f338ad2811245}\index{domain.catalog.Catalog@{domain.catalog.Catalog}!findLinesByBrand@{findLinesByBrand}}
+\index{findLinesByBrand@{findLinesByBrand}!domain.catalog.Catalog@{domain.catalog.Catalog}}
+\doxysubsubsection{\texorpdfstring{findLinesByBrand()}{findLinesByBrand()}}
+{\footnotesize\ttfamily \label{classdomain_1_1catalog_1_1_catalog_af157dc06dbb9b227435f338ad2811245} 
+List$<$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} $>$ domain.\+catalog.\+Catalog.\+find\+Lines\+By\+Brand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}}}]{brand}{}\end{DoxyParamCaption})}
+
+
+
+Retourne toutes les gammes associées à une marque donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em brand} & instance de la marque cible \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+liste des gammes rattachées à cette marque 
+\end{DoxyReturn}
+\Hypertarget{classdomain_1_1catalog_1_1_catalog_a5bb1eb9c9aef963eea144825ec1d4d82}\index{domain.catalog.Catalog@{domain.catalog.Catalog}!findProductLineById@{findProductLineById}}
+\index{findProductLineById@{findProductLineById}!domain.catalog.Catalog@{domain.catalog.Catalog}}
+\doxysubsubsection{\texorpdfstring{findProductLineById()}{findProductLineById()}}
+{\footnotesize\ttfamily \label{classdomain_1_1catalog_1_1_catalog_a5bb1eb9c9aef963eea144825ec1d4d82} 
+Optional$<$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} $>$ domain.\+catalog.\+Catalog.\+find\+Product\+Line\+By\+Id (\begin{DoxyParamCaption}\item[{String}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Recherche une gamme à partir de son identifiant. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & identifiant de la gamme \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un Optional contenant la gamme si elle est trouvée 
+\end{DoxyReturn}
+\Hypertarget{classdomain_1_1catalog_1_1_catalog_aac66cb98fc8b57e5613dedcfb2530ad1}\index{domain.catalog.Catalog@{domain.catalog.Catalog}!getAllBrands@{getAllBrands}}
+\index{getAllBrands@{getAllBrands}!domain.catalog.Catalog@{domain.catalog.Catalog}}
+\doxysubsubsection{\texorpdfstring{getAllBrands()}{getAllBrands()}}
+{\footnotesize\ttfamily \label{classdomain_1_1catalog_1_1_catalog_aac66cb98fc8b57e5613dedcfb2530ad1} 
+List$<$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} $>$ domain.\+catalog.\+Catalog.\+get\+All\+Brands (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retourne toutes les marques actuellement enregistrées dans le catalogue. 
+
+\begin{DoxyReturn}{Renvoie}
+liste des marques 
+\end{DoxyReturn}
+\Hypertarget{classdomain_1_1catalog_1_1_catalog_a72bef5071a9fdad24e985e7b2e72376a}\index{domain.catalog.Catalog@{domain.catalog.Catalog}!getAllProductLines@{getAllProductLines}}
+\index{getAllProductLines@{getAllProductLines}!domain.catalog.Catalog@{domain.catalog.Catalog}}
+\doxysubsubsection{\texorpdfstring{getAllProductLines()}{getAllProductLines()}}
+{\footnotesize\ttfamily \label{classdomain_1_1catalog_1_1_catalog_a72bef5071a9fdad24e985e7b2e72376a} 
+List$<$ \mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} $>$ domain.\+catalog.\+Catalog.\+get\+All\+Product\+Lines (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retourne toutes les gammes de produits enregistrées. 
+
+\begin{DoxyReturn}{Renvoie}
+liste des gammes 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/domain/catalog/\mbox{\hyperlink{_catalog_8java}{Catalog.\+java}}\end{DoxyCompactItemize}

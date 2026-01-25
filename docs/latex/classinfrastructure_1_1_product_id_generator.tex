@@ -1,0 +1,71 @@
+\doxysection{Référence de la classe infrastructure.\+Product\+Id\+Generator}
+\hypertarget{classinfrastructure_1_1_product_id_generator}{}\label{classinfrastructure_1_1_product_id_generator}\index{infrastructure.ProductIdGenerator@{infrastructure.ProductIdGenerator}}
+
+
+Générateur d\textquotesingle{}identifiants uniques pour les produits.  
+
+
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static synchronized String \mbox{\hyperlink{classinfrastructure_1_1_product_id_generator_a6d168153d8af7c12468736f14eae1518}{generate\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Génère un nouvel identifiant unique sous forme de chaîne. \end{DoxyCompactList}\item 
+static synchronized void \mbox{\hyperlink{classinfrastructure_1_1_product_id_generator_aa41cc88fd2dd985e6f5c56f809606c22}{initialize\+From}} (int last\+Used\+Id)
+\begin{DoxyCompactList}\small\item\em Initialise manuellement l\textquotesingle{}état interne du générateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Générateur d\textquotesingle{}identifiants uniques pour les produits. 
+
+Garantit l\textquotesingle{}unicité des IDs via un incrément interne.
+
+Utilisé pour éviter la duplication d\textquotesingle{}identifiants produits lors de l\textquotesingle{}ajout de nouveaux éléments au stock.
+
+Ce générateur est thread-\/safe via synchronisation explicite.
+
+\begin{DoxyAuthor}{Auteur}
+Lucas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+
+
+\label{doc-func-members}
+\Hypertarget{classinfrastructure_1_1_product_id_generator_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classinfrastructure_1_1_product_id_generator_a6d168153d8af7c12468736f14eae1518}\index{infrastructure.ProductIdGenerator@{infrastructure.ProductIdGenerator}!generateId@{generateId}}
+\index{generateId@{generateId}!infrastructure.ProductIdGenerator@{infrastructure.ProductIdGenerator}}
+\doxysubsubsection{\texorpdfstring{generateId()}{generateId()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_product_id_generator_a6d168153d8af7c12468736f14eae1518} 
+synchronized String infrastructure.\+Product\+Id\+Generator.\+generate\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Génère un nouvel identifiant unique sous forme de chaîne. 
+
+\begin{DoxyReturn}{Renvoie}
+identifiant produit incrémental (ex\+: "{}1"{}, "{}2"{}, "{}3"{}, ...) 
+\end{DoxyReturn}
+\Hypertarget{classinfrastructure_1_1_product_id_generator_aa41cc88fd2dd985e6f5c56f809606c22}\index{infrastructure.ProductIdGenerator@{infrastructure.ProductIdGenerator}!initializeFrom@{initializeFrom}}
+\index{initializeFrom@{initializeFrom}!infrastructure.ProductIdGenerator@{infrastructure.ProductIdGenerator}}
+\doxysubsubsection{\texorpdfstring{initializeFrom()}{initializeFrom()}}
+{\footnotesize\ttfamily \label{classinfrastructure_1_1_product_id_generator_aa41cc88fd2dd985e6f5c56f809606c22} 
+synchronized void infrastructure.\+Product\+Id\+Generator.\+initialize\+From (\begin{DoxyParamCaption}\item[{int}]{last\+Used\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initialise manuellement l\textquotesingle{}état interne du générateur. 
+
+Permet d\textquotesingle{}éviter les collisions si des produits préexistants sont rechargés depuis une base externe ou un fichier.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em last\+Used\+Id} & identifiant le plus élevé actuellement utilisé \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/infrastructure/\mbox{\hyperlink{_product_id_generator_8java}{Product\+Id\+Generator.\+java}}\end{DoxyCompactItemize}

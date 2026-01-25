@@ -1,0 +1,161 @@
+\doxysection{Référence de la classe domain.\+product.\+Container\+Product}
+\hypertarget{classdomain_1_1product_1_1_container_product}{}\label{classdomain_1_1product_1_1_container_product}\index{domain.product.ContainerProduct@{domain.product.ContainerProduct}}
+
+
+Représente un produit conteneur, c’est-\/à-\/dire un produit composé qui contient une certaine quantité d’un autre produit.  
+
+
+
+
+Graphe d\textquotesingle{}héritage de domain.\+product.\+Container\+Product\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classdomain_1_1product_1_1_container_product__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de domain.\+product.\+Container\+Product\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classdomain_1_1product_1_1_container_product__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdomain_1_1product_1_1_container_product_aa771e7407bf9945d096be952153160b0}{Container\+Product}} (String id, String name, double price, int stock, \mbox{\hyperlink{classdomain_1_1product_1_1_product_a5a1595312f818f2ba75bfc7ac2d4d422}{Product}} contained\+Product, int contained\+Quantity, \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} brand, \mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} product\+Line)
+\begin{DoxyCompactList}\small\item\em Construit un produit conteneur avec son contenu et ses attributs de base. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1product_1_1_product_a5a1595312f818f2ba75bfc7ac2d4d422}{Product}} \mbox{\hyperlink{classdomain_1_1product_1_1_container_product_a76f9ed3a912aa81bb442c78d307be171}{get\+Contained\+Product}} ()
+\begin{DoxyCompactList}\small\item\em Retourne le produit contenu dans ce conteneur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdomain_1_1product_1_1_container_product_a7db9db20b12ae965516c47ee79b08b2e}{get\+Contained\+Quantity}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la quantité du produit contenu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{classdomain_1_1product_1_1_product}{domain.\+product.\+Product}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdomain_1_1product_1_1_product_a5a1595312f818f2ba75bfc7ac2d4d422}{Product}} (String id, String name, double price, int stock, \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} brand, \mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} product\+Line)
+\begin{DoxyCompactList}\small\item\em Construit un produit générique avec validation des contraintes métier. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdomain_1_1product_1_1_product_a02adba4533632f33c0f62dca8592a920}{get\+Product\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}identifiant unique du produit. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdomain_1_1product_1_1_product_a2b5d35bdc181ae4aadd9dc21188ca8d8}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retourne le nom du produit. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdomain_1_1product_1_1_product_ab7dba8b7fa7529e93f867ab7ce7edfda}{get\+Price}} ()
+\begin{DoxyCompactList}\small\item\em Retourne le prix unitaire du produit. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdomain_1_1product_1_1_product_a63b4a0867feb6d8761be628c80951046}{get\+Stock}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la quantité en stock. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} \mbox{\hyperlink{classdomain_1_1product_1_1_product_a3f989b7cd47b684e15163909681fbba1}{get\+Brand}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la marque associée au produit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} \mbox{\hyperlink{classdomain_1_1product_1_1_product_a82233b1106551cfa6313ad31342859bc}{get\+Product\+Line}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la gamme à laquelle appartient le produit. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdomain_1_1product_1_1_product_a422dd62910ad9bbb9833c48fc589e778}{to\+String}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représente un produit conteneur, c’est-\/à-\/dire un produit composé qui contient une certaine quantité d’un autre produit. 
+
+Ce type de produit est utile pour les lots, packs ou combinaisons de produits.
+
+Hérite des propriétés de base d’un {\ttfamily \doxylink{classdomain_1_1product_1_1_product}{Product}}.
+
+\begin{DoxyAuthor}{Auteur}
+Lucas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+
+
+\label{doc-constructors}
+\Hypertarget{classdomain_1_1product_1_1_container_product_doc-constructors}
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classdomain_1_1product_1_1_container_product_aa771e7407bf9945d096be952153160b0}\index{domain.product.ContainerProduct@{domain.product.ContainerProduct}!ContainerProduct@{ContainerProduct}}
+\index{ContainerProduct@{ContainerProduct}!domain.product.ContainerProduct@{domain.product.ContainerProduct}}
+\doxysubsubsection{\texorpdfstring{ContainerProduct()}{ContainerProduct()}}
+{\footnotesize\ttfamily \label{classdomain_1_1product_1_1_container_product_aa771e7407bf9945d096be952153160b0} 
+domain.\+product.\+Container\+Product.\+Container\+Product (\begin{DoxyParamCaption}\item[{String}]{id}{, }\item[{String}]{name}{, }\item[{double}]{price}{, }\item[{int}]{stock}{, }\item[{\mbox{\hyperlink{classdomain_1_1product_1_1_product_a5a1595312f818f2ba75bfc7ac2d4d422}{Product}}}]{contained\+Product}{, }\item[{int}]{contained\+Quantity}{, }\item[{\mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}}}]{brand}{, }\item[{\mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}}}]{product\+Line}{}\end{DoxyParamCaption})}
+
+
+
+Construit un produit conteneur avec son contenu et ses attributs de base. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & identifiant unique du conteneur \\
+\hline
+{\em name} & nom du conteneur \\
+\hline
+{\em price} & prix du conteneur (peut être différent du produit contenu) \\
+\hline
+{\em stock} & quantité en stock du conteneur \\
+\hline
+{\em contained\+Product} & produit contenu (ne peut pas être nul) \\
+\hline
+{\em contained\+Quantity} & quantité du produit contenu (strictement positive) \\
+\hline
+{\em brand} & marque associée \\
+\hline
+{\em product\+Line} & gamme associée \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & si le produit contenu est nul ou si la quantité est invalide \\
+\hline
+\end{DoxyExceptions}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdomain_1_1product_1_1_container_product_aa771e7407bf9945d096be952153160b0_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classdomain_1_1product_1_1_container_product_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classdomain_1_1product_1_1_container_product_a76f9ed3a912aa81bb442c78d307be171}\index{domain.product.ContainerProduct@{domain.product.ContainerProduct}!getContainedProduct@{getContainedProduct}}
+\index{getContainedProduct@{getContainedProduct}!domain.product.ContainerProduct@{domain.product.ContainerProduct}}
+\doxysubsubsection{\texorpdfstring{getContainedProduct()}{getContainedProduct()}}
+{\footnotesize\ttfamily \label{classdomain_1_1product_1_1_container_product_a76f9ed3a912aa81bb442c78d307be171} 
+\mbox{\hyperlink{classdomain_1_1product_1_1_product_a5a1595312f818f2ba75bfc7ac2d4d422}{Product}} domain.\+product.\+Container\+Product.\+get\+Contained\+Product (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retourne le produit contenu dans ce conteneur. 
+
+\begin{DoxyReturn}{Renvoie}
+produit encapsulé 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdomain_1_1product_1_1_container_product_a76f9ed3a912aa81bb442c78d307be171_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classdomain_1_1product_1_1_container_product_a7db9db20b12ae965516c47ee79b08b2e}\index{domain.product.ContainerProduct@{domain.product.ContainerProduct}!getContainedQuantity@{getContainedQuantity}}
+\index{getContainedQuantity@{getContainedQuantity}!domain.product.ContainerProduct@{domain.product.ContainerProduct}}
+\doxysubsubsection{\texorpdfstring{getContainedQuantity()}{getContainedQuantity()}}
+{\footnotesize\ttfamily \label{classdomain_1_1product_1_1_container_product_a7db9db20b12ae965516c47ee79b08b2e} 
+int domain.\+product.\+Container\+Product.\+get\+Contained\+Quantity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retourne la quantité du produit contenu. 
+
+\begin{DoxyReturn}{Renvoie}
+quantité encapsulée 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/domain/product/\mbox{\hyperlink{_container_product_8java}{Container\+Product.\+java}}\end{DoxyCompactItemize}

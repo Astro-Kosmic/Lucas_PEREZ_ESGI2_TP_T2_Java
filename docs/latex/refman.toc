@@ -1,0 +1,175 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Hiérarchie de répertoires}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Répertoires}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Index des espaces de nommage}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Liste des paquetages}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Index hiérarchique}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Hiérarchie des classes}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Index des classes}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Liste des classes}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Index des fichiers}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Liste des fichiers}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Documentation des répertoires}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Répertoire de référence de src/application}{11}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Répertoire de référence de src/domain/catalog}{12}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Répertoire de référence de src/domain}{12}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Répertoire de référence de src/infrastructure}{13}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Répertoire de référence de src/application/ports}{13}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Répertoire de référence de src/presentation}{14}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Répertoire de référence de src/domain/product}{14}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Répertoire de référence de src}{15}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Répertoire de référence de src/test}{15}{section.6.9}%
+\contentsline {chapter}{\numberline {7}Documentation des espaces de nommage}{17}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Paquetage application}{17}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Paquetage application.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ports}{17}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Paquetage domain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}catalog}{18}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Paquetage domain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}product}{18}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Paquetage infrastructure}{18}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Paquetage presentation}{18}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Paquetage test}{19}{section.7.7}%
+\contentsline {chapter}{\numberline {8}Documentation des classes}{21}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Référence de la classe application.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Add\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Use\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Case}{21}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Description détaillée}{21}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Documentation des constructeurs et destructeur}{22}{subsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.2.1}AddProductUseCase()}{22}{subsubsection.8.1.2.1}%
+\contentsline {subsection}{\numberline {8.1.3}Documentation des fonctions membres}{23}{subsection.8.1.3}%
+\contentsline {subsubsection}{\numberline {8.1.3.1}execute()}{23}{subsubsection.8.1.3.1}%
+\contentsline {section}{\numberline {8.2}Référence de la classe domain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}catalog.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Brand}{24}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Description détaillée}{24}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Documentation des constructeurs et destructeur}{24}{subsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.2.1}Brand()}{24}{subsubsection.8.2.2.1}%
+\contentsline {subsection}{\numberline {8.2.3}Documentation des fonctions membres}{25}{subsection.8.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.3.1}equals()}{25}{subsubsection.8.2.3.1}%
+\contentsline {subsubsection}{\numberline {8.2.3.2}getBrandId()}{26}{subsubsection.8.2.3.2}%
+\contentsline {subsubsection}{\numberline {8.2.3.3}getName()}{26}{subsubsection.8.2.3.3}%
+\contentsline {subsubsection}{\numberline {8.2.3.4}hashCode()}{26}{subsubsection.8.2.3.4}%
+\contentsline {subsubsection}{\numberline {8.2.3.5}toString()}{26}{subsubsection.8.2.3.5}%
+\contentsline {section}{\numberline {8.3}Référence de la classe domain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}catalog.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Catalog}{26}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Description détaillée}{27}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Documentation des fonctions membres}{27}{subsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.2.1}createBrand()}{27}{subsubsection.8.3.2.1}%
+\contentsline {subsubsection}{\numberline {8.3.2.2}createProductLine()}{28}{subsubsection.8.3.2.2}%
+\contentsline {subsubsection}{\numberline {8.3.2.3}findBrandById()}{28}{subsubsection.8.3.2.3}%
+\contentsline {subsubsection}{\numberline {8.3.2.4}findLinesByBrand()}{29}{subsubsection.8.3.2.4}%
+\contentsline {subsubsection}{\numberline {8.3.2.5}findProductLineById()}{29}{subsubsection.8.3.2.5}%
+\contentsline {subsubsection}{\numberline {8.3.2.6}getAllBrands()}{29}{subsubsection.8.3.2.6}%
+\contentsline {subsubsection}{\numberline {8.3.2.7}getAllProductLines()}{30}{subsubsection.8.3.2.7}%
+\contentsline {section}{\numberline {8.4}Référence de la classe presentation.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Console\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface}{30}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Description détaillée}{30}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Documentation des fonctions membres}{31}{subsection.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.4.2.1}start()}{31}{subsubsection.8.4.2.1}%
+\contentsline {section}{\numberline {8.5}Référence de la classe domain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}product.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Container\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product}{31}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Description détaillée}{33}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.5.2}Documentation des constructeurs et destructeur}{33}{subsection.8.5.2}%
+\contentsline {subsubsection}{\numberline {8.5.2.1}ContainerProduct()}{33}{subsubsection.8.5.2.1}%
+\contentsline {subsection}{\numberline {8.5.3}Documentation des fonctions membres}{34}{subsection.8.5.3}%
+\contentsline {subsubsection}{\numberline {8.5.3.1}getContainedProduct()}{34}{subsubsection.8.5.3.1}%
+\contentsline {subsubsection}{\numberline {8.5.3.2}getContainedQuantity()}{34}{subsubsection.8.5.3.2}%
+\contentsline {section}{\numberline {8.6}Référence de la classe application.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Delete\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Use\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Case}{35}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Description détaillée}{35}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Documentation des constructeurs et destructeur}{35}{subsection.8.6.2}%
+\contentsline {subsubsection}{\numberline {8.6.2.1}DeleteProductUseCase()}{35}{subsubsection.8.6.2.1}%
+\contentsline {subsection}{\numberline {8.6.3}Documentation des fonctions membres}{35}{subsection.8.6.3}%
+\contentsline {subsubsection}{\numberline {8.6.3.1}execute()}{35}{subsubsection.8.6.3.1}%
+\contentsline {section}{\numberline {8.7}Référence de la classe infrastructure.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}In\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Memory\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repository}{36}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Description détaillée}{37}{subsection.8.7.1}%
+\contentsline {subsection}{\numberline {8.7.2}Documentation des fonctions membres}{37}{subsection.8.7.2}%
+\contentsline {subsubsection}{\numberline {8.7.2.1}deleteById()}{37}{subsubsection.8.7.2.1}%
+\contentsline {subsubsection}{\numberline {8.7.2.2}existsById()}{38}{subsubsection.8.7.2.2}%
+\contentsline {subsubsection}{\numberline {8.7.2.3}findAll()}{38}{subsubsection.8.7.2.3}%
+\contentsline {subsubsection}{\numberline {8.7.2.4}findById()}{38}{subsubsection.8.7.2.4}%
+\contentsline {subsubsection}{\numberline {8.7.2.5}save()}{39}{subsubsection.8.7.2.5}%
+\contentsline {subsubsection}{\numberline {8.7.2.6}search()}{39}{subsubsection.8.7.2.6}%
+\contentsline {section}{\numberline {8.8}Référence de la classe Main}{39}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Description détaillée}{40}{subsection.8.8.1}%
+\contentsline {subsection}{\numberline {8.8.2}Documentation des fonctions membres}{40}{subsection.8.8.2}%
+\contentsline {subsubsection}{\numberline {8.8.2.1}main()}{40}{subsubsection.8.8.2.1}%
+\contentsline {section}{\numberline {8.9}application.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Search\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Use\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Case.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mode Référence de l\textquotesingle {}énumération}{41}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Description détaillée}{41}{subsection.8.9.1}%
+\contentsline {subsection}{\numberline {8.9.2}Documentation des données membres}{41}{subsection.8.9.2}%
+\contentsline {subsubsection}{\numberline {8.9.2.1}BOTH}{41}{subsubsection.8.9.2.1}%
+\contentsline {subsubsection}{\numberline {8.9.2.2}ID}{41}{subsubsection.8.9.2.2}%
+\contentsline {subsubsection}{\numberline {8.9.2.3}NAME}{41}{subsubsection.8.9.2.3}%
+\contentsline {section}{\numberline {8.10}Référence de la classe domain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}product.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product}{41}{section.8.10}%
+\contentsline {subsection}{\numberline {8.10.1}Description détaillée}{42}{subsection.8.10.1}%
+\contentsline {subsection}{\numberline {8.10.2}Documentation des constructeurs et destructeur}{42}{subsection.8.10.2}%
+\contentsline {subsubsection}{\numberline {8.10.2.1}Product()}{42}{subsubsection.8.10.2.1}%
+\contentsline {subsection}{\numberline {8.10.3}Documentation des fonctions membres}{43}{subsection.8.10.3}%
+\contentsline {subsubsection}{\numberline {8.10.3.1}getBrand()}{43}{subsubsection.8.10.3.1}%
+\contentsline {subsubsection}{\numberline {8.10.3.2}getName()}{44}{subsubsection.8.10.3.2}%
+\contentsline {subsubsection}{\numberline {8.10.3.3}getPrice()}{44}{subsubsection.8.10.3.3}%
+\contentsline {subsubsection}{\numberline {8.10.3.4}getProductId()}{45}{subsubsection.8.10.3.4}%
+\contentsline {subsubsection}{\numberline {8.10.3.5}getProductLine()}{46}{subsubsection.8.10.3.5}%
+\contentsline {subsubsection}{\numberline {8.10.3.6}getStock()}{46}{subsubsection.8.10.3.6}%
+\contentsline {subsubsection}{\numberline {8.10.3.7}toString()}{47}{subsubsection.8.10.3.7}%
+\contentsline {section}{\numberline {8.11}Référence de la classe infrastructure.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Id\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Generator}{47}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}Description détaillée}{47}{subsection.8.11.1}%
+\contentsline {subsection}{\numberline {8.11.2}Documentation des fonctions membres}{47}{subsection.8.11.2}%
+\contentsline {subsubsection}{\numberline {8.11.2.1}generateId()}{47}{subsubsection.8.11.2.1}%
+\contentsline {subsubsection}{\numberline {8.11.2.2}initializeFrom()}{47}{subsubsection.8.11.2.2}%
+\contentsline {section}{\numberline {8.12}Référence de la classe domain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}catalog.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line}{48}{section.8.12}%
+\contentsline {subsection}{\numberline {8.12.1}Description détaillée}{48}{subsection.8.12.1}%
+\contentsline {subsection}{\numberline {8.12.2}Documentation des constructeurs et destructeur}{48}{subsection.8.12.2}%
+\contentsline {subsubsection}{\numberline {8.12.2.1}ProductLine()}{48}{subsubsection.8.12.2.1}%
+\contentsline {subsection}{\numberline {8.12.3}Documentation des fonctions membres}{49}{subsection.8.12.3}%
+\contentsline {subsubsection}{\numberline {8.12.3.1}equals()}{49}{subsubsection.8.12.3.1}%
+\contentsline {subsubsection}{\numberline {8.12.3.2}getBrand()}{49}{subsubsection.8.12.3.2}%
+\contentsline {subsubsection}{\numberline {8.12.3.3}getLineId()}{50}{subsubsection.8.12.3.3}%
+\contentsline {subsubsection}{\numberline {8.12.3.4}getName()}{50}{subsubsection.8.12.3.4}%
+\contentsline {subsubsection}{\numberline {8.12.3.5}hashCode()}{50}{subsubsection.8.12.3.5}%
+\contentsline {subsubsection}{\numberline {8.12.3.6}toString()}{50}{subsubsection.8.12.3.6}%
+\contentsline {section}{\numberline {8.13}Référence de l\textquotesingle {}interface application.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ports.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repository}{50}{section.8.13}%
+\contentsline {subsection}{\numberline {8.13.1}Description détaillée}{51}{subsection.8.13.1}%
+\contentsline {subsection}{\numberline {8.13.2}Documentation des fonctions membres}{51}{subsection.8.13.2}%
+\contentsline {subsubsection}{\numberline {8.13.2.1}deleteById()}{51}{subsubsection.8.13.2.1}%
+\contentsline {subsubsection}{\numberline {8.13.2.2}existsById()}{52}{subsubsection.8.13.2.2}%
+\contentsline {subsubsection}{\numberline {8.13.2.3}findAll()}{53}{subsubsection.8.13.2.3}%
+\contentsline {subsubsection}{\numberline {8.13.2.4}findById()}{53}{subsubsection.8.13.2.4}%
+\contentsline {subsubsection}{\numberline {8.13.2.5}save()}{53}{subsubsection.8.13.2.5}%
+\contentsline {subsubsection}{\numberline {8.13.2.6}search()}{54}{subsubsection.8.13.2.6}%
+\contentsline {section}{\numberline {8.14}Référence de la classe application.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Search\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Use\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Case}{54}{section.8.14}%
+\contentsline {subsection}{\numberline {8.14.1}Description détaillée}{55}{subsection.8.14.1}%
+\contentsline {subsection}{\numberline {8.14.2}Documentation des constructeurs et destructeur}{55}{subsection.8.14.2}%
+\contentsline {subsubsection}{\numberline {8.14.2.1}SearchProductUseCase()}{55}{subsubsection.8.14.2.1}%
+\contentsline {subsection}{\numberline {8.14.3}Documentation des fonctions membres}{55}{subsection.8.14.3}%
+\contentsline {subsubsection}{\numberline {8.14.3.1}execute()}{55}{subsubsection.8.14.3.1}%
+\contentsline {section}{\numberline {8.15}Référence de la classe application.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sell\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Use\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Case}{55}{section.8.15}%
+\contentsline {subsection}{\numberline {8.15.1}Description détaillée}{56}{subsection.8.15.1}%
+\contentsline {subsection}{\numberline {8.15.2}Documentation des constructeurs et destructeur}{56}{subsection.8.15.2}%
+\contentsline {subsubsection}{\numberline {8.15.2.1}SellProductUseCase()}{56}{subsubsection.8.15.2.1}%
+\contentsline {subsection}{\numberline {8.15.3}Documentation des fonctions membres}{56}{subsection.8.15.3}%
+\contentsline {subsubsection}{\numberline {8.15.3.1}execute()}{56}{subsubsection.8.15.3.1}%
+\contentsline {section}{\numberline {8.16}Référence de la classe domain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}product.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Simple\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product}{57}{section.8.16}%
+\contentsline {subsection}{\numberline {8.16.1}Description détaillée}{59}{subsection.8.16.1}%
+\contentsline {subsection}{\numberline {8.16.2}Documentation des constructeurs et destructeur}{59}{subsection.8.16.2}%
+\contentsline {subsubsection}{\numberline {8.16.2.1}SimpleProduct()}{59}{subsubsection.8.16.2.1}%
+\contentsline {section}{\numberline {8.17}Référence de la classe application.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sort\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Products\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Use\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Case}{60}{section.8.17}%
+\contentsline {subsection}{\numberline {8.17.1}Description détaillée}{60}{subsection.8.17.1}%
+\contentsline {subsection}{\numberline {8.17.2}Documentation des constructeurs et destructeur}{60}{subsection.8.17.2}%
+\contentsline {subsubsection}{\numberline {8.17.2.1}SortProductsUseCase()}{60}{subsubsection.8.17.2.1}%
+\contentsline {subsection}{\numberline {8.17.3}Documentation des fonctions membres}{61}{subsection.8.17.3}%
+\contentsline {subsubsection}{\numberline {8.17.3.1}sortByPrice()}{61}{subsubsection.8.17.3.1}%
+\contentsline {subsubsection}{\numberline {8.17.3.2}sortByPriceSelectionSort()}{61}{subsubsection.8.17.3.2}%
+\contentsline {section}{\numberline {8.18}Référence de la classe test.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Runner}{61}{section.8.18}%
+\contentsline {subsection}{\numberline {8.18.1}Description détaillée}{62}{subsection.8.18.1}%
+\contentsline {subsection}{\numberline {8.18.2}Documentation des fonctions membres}{62}{subsection.8.18.2}%
+\contentsline {subsubsection}{\numberline {8.18.2.1}main()}{62}{subsubsection.8.18.2.1}%
+\contentsline {chapter}{\numberline {9}Documentation des fichiers}{63}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Référence du fichier src/application/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Add\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Use\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Case.java}{63}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Référence du fichier src/application/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Delete\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Use\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Case.java}{64}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Référence du fichier src/application/ports/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repository.java}{64}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Référence du fichier src/application/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Search\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Use\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Case.java}{65}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Référence du fichier src/application/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sell\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Use\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Case.java}{66}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Référence du fichier src/application/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sort\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Products\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Use\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Case.java}{66}{section.9.6}%
+\contentsline {section}{\numberline {9.7}Référence du fichier src/domain/catalog/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Brand.java}{67}{section.9.7}%
+\contentsline {section}{\numberline {9.8}Référence du fichier src/domain/catalog/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Catalog.java}{68}{section.9.8}%
+\contentsline {section}{\numberline {9.9}Référence du fichier src/domain/catalog/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line.java}{68}{section.9.9}%
+\contentsline {section}{\numberline {9.10}Référence du fichier src/domain/product/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Container\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product.java}{69}{section.9.10}%
+\contentsline {section}{\numberline {9.11}Référence du fichier src/domain/product/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product.java}{70}{section.9.11}%
+\contentsline {section}{\numberline {9.12}Référence du fichier src/domain/product/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Simple\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product.java}{70}{section.9.12}%
+\contentsline {section}{\numberline {9.13}Référence du fichier src/infrastructure/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}In\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Memory\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repository.java}{71}{section.9.13}%
+\contentsline {section}{\numberline {9.14}Référence du fichier src/infrastructure/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Id\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Generator.java}{71}{section.9.14}%
+\contentsline {section}{\numberline {9.15}Référence du fichier src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Main.java}{72}{section.9.15}%
+\contentsline {section}{\numberline {9.16}Référence du fichier src/presentation/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Console\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Interface.java}{72}{section.9.16}%
+\contentsline {section}{\numberline {9.17}Référence du fichier src/test/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Runner.java}{73}{section.9.17}%

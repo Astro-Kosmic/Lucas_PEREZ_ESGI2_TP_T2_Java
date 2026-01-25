@@ -1,0 +1,101 @@
+\doxysection{Référence de la classe application.\+Sort\+Products\+Use\+Case}
+\hypertarget{classapplication_1_1_sort_products_use_case}{}\label{classapplication_1_1_sort_products_use_case}\index{application.SortProductsUseCase@{application.SortProductsUseCase}}
+
+
+Cas d\textquotesingle{}usage \+: Trier les produits du stock par ordre croissant de prix.  
+
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classapplication_1_1_sort_products_use_case_a7c650aadff492687eec48e1b53053a6a}{Sort\+Products\+Use\+Case}} (\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}} repository)
+\begin{DoxyCompactList}\small\item\em Initialise le cas d\textquotesingle{}utilisation avec le référentiel des produits. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} $>$ \mbox{\hyperlink{classapplication_1_1_sort_products_use_case_a50450d2e8f7304e5fc6ce38bee0efdce}{sort\+By\+Price}} ()
+\begin{DoxyCompactList}\small\item\em Trie les produits en mémoire par prix croissant. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} $>$ \mbox{\hyperlink{classapplication_1_1_sort_products_use_case_a5e23211e1bd6e3fb8aef9d3d933b05e2}{sort\+By\+Price\+Selection\+Sort}} ()
+\begin{DoxyCompactList}\small\item\em Variante manuelle du tri utilisant l\textquotesingle{}algorithme de tri par sélection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Cas d\textquotesingle{}usage \+: Trier les produits du stock par ordre croissant de prix. 
+
+Ce cas d\textquotesingle{}utilisation propose deux approches \+: 
+\begin{DoxyItemize}
+\item Tri rapide via l\textquotesingle{}API Java standard (Comparator + sort) 
+\item Tri manuel via l\textquotesingle{}algorithme de tri par sélection (à des fins pédagogiques ou de benchmarking) 
+\end{DoxyItemize}Cette classe n\textquotesingle{}effectue aucun tri en place dans le dépôt \+: elle retourne une nouvelle liste triée.
+
+\begin{DoxyAuthor}{Auteur}
+Lucas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+
+
+\label{doc-constructors}
+\Hypertarget{classapplication_1_1_sort_products_use_case_doc-constructors}
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classapplication_1_1_sort_products_use_case_a7c650aadff492687eec48e1b53053a6a}\index{application.SortProductsUseCase@{application.SortProductsUseCase}!SortProductsUseCase@{SortProductsUseCase}}
+\index{SortProductsUseCase@{SortProductsUseCase}!application.SortProductsUseCase@{application.SortProductsUseCase}}
+\doxysubsubsection{\texorpdfstring{SortProductsUseCase()}{SortProductsUseCase()}}
+{\footnotesize\ttfamily \label{classapplication_1_1_sort_products_use_case_a7c650aadff492687eec48e1b53053a6a} 
+application.\+Sort\+Products\+Use\+Case.\+Sort\+Products\+Use\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}}}]{repository}{}\end{DoxyParamCaption})}
+
+
+
+Initialise le cas d\textquotesingle{}utilisation avec le référentiel des produits. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em repository} & Interface d\textquotesingle{}accès aux produits \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classapplication_1_1_sort_products_use_case_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classapplication_1_1_sort_products_use_case_a50450d2e8f7304e5fc6ce38bee0efdce}\index{application.SortProductsUseCase@{application.SortProductsUseCase}!sortByPrice@{sortByPrice}}
+\index{sortByPrice@{sortByPrice}!application.SortProductsUseCase@{application.SortProductsUseCase}}
+\doxysubsubsection{\texorpdfstring{sortByPrice()}{sortByPrice()}}
+{\footnotesize\ttfamily \label{classapplication_1_1_sort_products_use_case_a50450d2e8f7304e5fc6ce38bee0efdce} 
+List$<$ \mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} $>$ application.\+Sort\+Products\+Use\+Case.\+sort\+By\+Price (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Trie les produits en mémoire par prix croissant. 
+
+Utilise {\ttfamily \doxylink{}{java.\+util.\+Collections\#sort(\+List, java.\+util.\+Comparator)}} pour des performances optimales.
+
+\begin{DoxyReturn}{Renvoie}
+liste de produits triée par prix 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapplication_1_1_sort_products_use_case_a50450d2e8f7304e5fc6ce38bee0efdce_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classapplication_1_1_sort_products_use_case_a5e23211e1bd6e3fb8aef9d3d933b05e2}\index{application.SortProductsUseCase@{application.SortProductsUseCase}!sortByPriceSelectionSort@{sortByPriceSelectionSort}}
+\index{sortByPriceSelectionSort@{sortByPriceSelectionSort}!application.SortProductsUseCase@{application.SortProductsUseCase}}
+\doxysubsubsection{\texorpdfstring{sortByPriceSelectionSort()}{sortByPriceSelectionSort()}}
+{\footnotesize\ttfamily \label{classapplication_1_1_sort_products_use_case_a5e23211e1bd6e3fb8aef9d3d933b05e2} 
+List$<$ \mbox{\hyperlink{classdomain_1_1product_1_1_product}{Product}} $>$ application.\+Sort\+Products\+Use\+Case.\+sort\+By\+Price\+Selection\+Sort (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Variante manuelle du tri utilisant l\textquotesingle{}algorithme de tri par sélection. 
+
+Moins efficace que {\ttfamily \doxylink{classapplication_1_1_sort_products_use_case_a50450d2e8f7304e5fc6ce38bee0efdce}{sort\+By\+Price()}}, mais utile pour l\textquotesingle{}analyse de performance ou démonstration.
+
+\begin{DoxyReturn}{Renvoie}
+liste triée par prix en utilisant un algorithme bas-\/niveau 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/application/\mbox{\hyperlink{_sort_products_use_case_8java}{Sort\+Products\+Use\+Case.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\doxysection{Référence de la classe application.\+Delete\+Product\+Use\+Case}
+\hypertarget{classapplication_1_1_delete_product_use_case}{}\label{classapplication_1_1_delete_product_use_case}\index{application.DeleteProductUseCase@{application.DeleteProductUseCase}}
+
+
+Cas d\textquotesingle{}usage pour la suppression d’un produit du stock.  
+
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classapplication_1_1_delete_product_use_case_abc52d67956efda818200200384ee9b58}{Delete\+Product\+Use\+Case}} (\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}} product\+Repository)
+\begin{DoxyCompactList}\small\item\em Construit le cas d’usage avec le référentiel produit injecté. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classapplication_1_1_delete_product_use_case_a8c9976f3e4ddd0a91fdf3cf038e1bd24}{execute}} (String product\+Id)
+\begin{DoxyCompactList}\small\item\em Supprime le produit correspondant à l’identifiant spécifié. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Cas d\textquotesingle{}usage pour la suppression d’un produit du stock. 
+
+Cette classe encapsule la logique métier liée à la suppression d’un produit existant. Elle effectue les validations nécessaires avant d’interagir avec le dépôt de persistance.
+
+Ce use case appartient à la couche application et dépend du port {\ttfamily \doxylink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}}.
+
+\begin{DoxyAuthor}{Auteur}
+Lucas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+2 
+\end{DoxyVersion}
+
+
+\label{doc-constructors}
+\Hypertarget{classapplication_1_1_delete_product_use_case_doc-constructors}
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classapplication_1_1_delete_product_use_case_abc52d67956efda818200200384ee9b58}\index{application.DeleteProductUseCase@{application.DeleteProductUseCase}!DeleteProductUseCase@{DeleteProductUseCase}}
+\index{DeleteProductUseCase@{DeleteProductUseCase}!application.DeleteProductUseCase@{application.DeleteProductUseCase}}
+\doxysubsubsection{\texorpdfstring{DeleteProductUseCase()}{DeleteProductUseCase()}}
+{\footnotesize\ttfamily \label{classapplication_1_1_delete_product_use_case_abc52d67956efda818200200384ee9b58} 
+application.\+Delete\+Product\+Use\+Case.\+Delete\+Product\+Use\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}}}]{product\+Repository}{}\end{DoxyParamCaption})}
+
+
+
+Construit le cas d’usage avec le référentiel produit injecté. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em product\+Repository} & le dépôt produit à utiliser pour les opérations \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classapplication_1_1_delete_product_use_case_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classapplication_1_1_delete_product_use_case_a8c9976f3e4ddd0a91fdf3cf038e1bd24}\index{application.DeleteProductUseCase@{application.DeleteProductUseCase}!execute@{execute}}
+\index{execute@{execute}!application.DeleteProductUseCase@{application.DeleteProductUseCase}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{classapplication_1_1_delete_product_use_case_a8c9976f3e4ddd0a91fdf3cf038e1bd24} 
+void application.\+Delete\+Product\+Use\+Case.\+execute (\begin{DoxyParamCaption}\item[{String}]{product\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Supprime le produit correspondant à l’identifiant spécifié. 
+
+Avant suppression, vérifie que l’identifiant est valide et que le produit existe réellement.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em product\+Id} & identifiant unique du produit à supprimer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & si l’\+ID est nul, vide ou que le produit n’existe pas \\
+\hline
+\end{DoxyExceptions}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/application/\mbox{\hyperlink{_delete_product_use_case_8java}{Delete\+Product\+Use\+Case.\+java}}\end{DoxyCompactItemize}

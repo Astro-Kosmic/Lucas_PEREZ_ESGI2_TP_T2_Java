@@ -1,0 +1,158 @@
+\doxysection{Référence de la classe domain.\+catalog.\+Brand}
+\hypertarget{classdomain_1_1catalog_1_1_brand}{}\label{classdomain_1_1catalog_1_1_brand}\index{domain.catalog.Brand@{domain.catalog.Brand}}
+
+
+Représente une marque à laquelle peuvent être associées une ou plusieurs gammes de produits.  
+
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdomain_1_1catalog_1_1_brand_a806513080c68dc3bb63ea26092fc4aeb}{Brand}} (String brand\+Id, String name)
+\begin{DoxyCompactList}\small\item\em Construit une instance de \doxylink{classdomain_1_1catalog_1_1_brand}{Brand} avec un identifiant et un nom. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand_a873b8c0d5556932f68eaf3708623ef7c}{get\+Brand\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}identifiant unique de la marque. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand_aec697ebc3b99b8765fcc36ffb2ac66ea}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retourne le nom de la marque. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand_ac514351c95e9826c1315d092fe7312a0}{equals}} (Object o)
+\begin{DoxyCompactList}\small\item\em Vérifie l\textquotesingle{}égalité entre deux marques sur la base de leur identifiant. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand_a53a09ed0ba9ebfd24bfa81802ca7f75c}{hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Calcule le hashcode basé sur l\textquotesingle{}identifiant de la marque. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand_ae7db453e1e05434f93cabc844d5610ac}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Fournit une représentation textuelle lisible de la marque. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représente une marque à laquelle peuvent être associées une ou plusieurs gammes de produits. 
+
+Chaque marque est identifiée de manière unique par un identifiant stable (brand\+Id) et possède un nom affiché lisible par un humain.
+
+\begin{DoxyAuthor}{Auteur}
+Lucas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+
+
+\label{doc-constructors}
+\Hypertarget{classdomain_1_1catalog_1_1_brand_doc-constructors}
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classdomain_1_1catalog_1_1_brand_a806513080c68dc3bb63ea26092fc4aeb}\index{domain.catalog.Brand@{domain.catalog.Brand}!Brand@{Brand}}
+\index{Brand@{Brand}!domain.catalog.Brand@{domain.catalog.Brand}}
+\doxysubsubsection{\texorpdfstring{Brand()}{Brand()}}
+{\footnotesize\ttfamily \label{classdomain_1_1catalog_1_1_brand_a806513080c68dc3bb63ea26092fc4aeb} 
+domain.\+catalog.\+Brand.\+Brand (\begin{DoxyParamCaption}\item[{String}]{brand\+Id}{, }\item[{String}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Construit une instance de \doxylink{classdomain_1_1catalog_1_1_brand}{Brand} avec un identifiant et un nom. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em brand\+Id} & identifiant unique de la marque (non nul) \\
+\hline
+{\em name} & nom lisible de la marque (non nul) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & si l\textquotesingle{}un des paramètres est nul \\
+\hline
+\end{DoxyExceptions}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdomain_1_1catalog_1_1_brand_a806513080c68dc3bb63ea26092fc4aeb_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classdomain_1_1catalog_1_1_brand_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classdomain_1_1catalog_1_1_brand_ac514351c95e9826c1315d092fe7312a0}\index{domain.catalog.Brand@{domain.catalog.Brand}!equals@{equals}}
+\index{equals@{equals}!domain.catalog.Brand@{domain.catalog.Brand}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily \label{classdomain_1_1catalog_1_1_brand_ac514351c95e9826c1315d092fe7312a0} 
+boolean domain.\+catalog.\+Brand.\+equals (\begin{DoxyParamCaption}\item[{Object}]{o}{}\end{DoxyParamCaption})}
+
+
+
+Vérifie l\textquotesingle{}égalité entre deux marques sur la base de leur identifiant. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em o} & objet à comparer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si les identifiants sont identiques, false sinon 
+\end{DoxyReturn}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdomain_1_1catalog_1_1_brand_ac514351c95e9826c1315d092fe7312a0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classdomain_1_1catalog_1_1_brand_a873b8c0d5556932f68eaf3708623ef7c}\index{domain.catalog.Brand@{domain.catalog.Brand}!getBrandId@{getBrandId}}
+\index{getBrandId@{getBrandId}!domain.catalog.Brand@{domain.catalog.Brand}}
+\doxysubsubsection{\texorpdfstring{getBrandId()}{getBrandId()}}
+{\footnotesize\ttfamily \label{classdomain_1_1catalog_1_1_brand_a873b8c0d5556932f68eaf3708623ef7c} 
+String domain.\+catalog.\+Brand.\+get\+Brand\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}identifiant unique de la marque. 
+
+\begin{DoxyReturn}{Renvoie}
+identifiant de la marque 
+\end{DoxyReturn}
+\Hypertarget{classdomain_1_1catalog_1_1_brand_aec697ebc3b99b8765fcc36ffb2ac66ea}\index{domain.catalog.Brand@{domain.catalog.Brand}!getName@{getName}}
+\index{getName@{getName}!domain.catalog.Brand@{domain.catalog.Brand}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{classdomain_1_1catalog_1_1_brand_aec697ebc3b99b8765fcc36ffb2ac66ea} 
+String domain.\+catalog.\+Brand.\+get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retourne le nom de la marque. 
+
+\begin{DoxyReturn}{Renvoie}
+nom de la marque 
+\end{DoxyReturn}
+\Hypertarget{classdomain_1_1catalog_1_1_brand_a53a09ed0ba9ebfd24bfa81802ca7f75c}\index{domain.catalog.Brand@{domain.catalog.Brand}!hashCode@{hashCode}}
+\index{hashCode@{hashCode}!domain.catalog.Brand@{domain.catalog.Brand}}
+\doxysubsubsection{\texorpdfstring{hashCode()}{hashCode()}}
+{\footnotesize\ttfamily \label{classdomain_1_1catalog_1_1_brand_a53a09ed0ba9ebfd24bfa81802ca7f75c} 
+int domain.\+catalog.\+Brand.\+hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calcule le hashcode basé sur l\textquotesingle{}identifiant de la marque. 
+
+\begin{DoxyReturn}{Renvoie}
+valeur de hachage 
+\end{DoxyReturn}
+\Hypertarget{classdomain_1_1catalog_1_1_brand_ae7db453e1e05434f93cabc844d5610ac}\index{domain.catalog.Brand@{domain.catalog.Brand}!toString@{toString}}
+\index{toString@{toString}!domain.catalog.Brand@{domain.catalog.Brand}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{classdomain_1_1catalog_1_1_brand_ae7db453e1e05434f93cabc844d5610ac} 
+String domain.\+catalog.\+Brand.\+to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Fournit une représentation textuelle lisible de la marque. 
+
+\begin{DoxyReturn}{Renvoie}
+chaîne descriptive de la marque 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/domain/catalog/\mbox{\hyperlink{_brand_8java}{Brand.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UML_Documentation.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="documentation-uml-du-projet-de-gestion-de-stock">Documentation UML du Projet de Gestion de Stock</h1>
+<h2 id="auteur">Auteur</h2>
+<p><strong>Lucas PEREZ</strong><br>
+Projet POO en JAVA — ESGI2 Campus Éductive<br>
+Trimestre 2 – 2025/2026</p>
+<hr>
+<p>Ce document fournit une vue d'ensemble de la modélisation UML du projet, incluant un <strong>diagramme de classes</strong> et des <strong>diagrammes de séquence</strong> représentatifs.</p>
+<hr>
+<h2 id="1-diagramme-de-classes">1. Diagramme de Classes</h2>
+<p>Ce diagramme décrit les principales entités métier du système, leur structure, et leurs relations.</p>
+<p><img src="img/Class_Diagram.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-meta">@startuml</span>
+<span class="hljs-keyword">package</span> <span class="hljs-string">"domain.catalog"</span> {
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Brand</span> </span>{
+    - brandId: String
+    - name: String
+    + getBrandId(): String
+    + getName(): String
+  }
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ProductLine</span> </span>{
+    - lineId: String
+    - name: String
+    - brand: Brand
+    + getLineId(): String
+    + getName(): String
+    + getBrand(): Brand
+  }
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Catalog</span> </span>{
+    - brands: Map&lt;String, Brand&gt;
+    - productLines: Map&lt;String, ProductLine&gt;
+    + createBrand(id: String, name: String): Brand
+    + createProductLine(id: String, name: String, brand: Brand): ProductLine
+    + getAllBrands(): List&lt;Brand&gt;
+    + getAllProductLines(): List&lt;ProductLine&gt;
+    + findBrandById(id: String): Optional&lt;Brand&gt;
+    + findProductLineById(id: String): Optional&lt;ProductLine&gt;
+    + findLinesByBrand(brand: Brand): List&lt;ProductLine&gt;
+  }
+
+  Brand &lt;-- ProductLine
+  Catalog --&gt; Brand
+  Catalog --&gt; ProductLine
+}
+
+<span class="hljs-keyword">package</span> <span class="hljs-string">"domain.product"</span> {
+  <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Product</span> </span>{
+    - id: String
+    - name: String
+    - price: <span class="hljs-keyword">double</span>
+    - stock: <span class="hljs-keyword">int</span>
+    - brand: Brand
+    - productLine: ProductLine
+    + getProductId(): String
+    + getName(): String
+    + getPrice(): <span class="hljs-keyword">double</span>
+    + getStock(): <span class="hljs-keyword">int</span>
+    + getBrand(): Brand
+    + getProductLine(): ProductLine
+  }
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SimpleProduct</span>
+  <span class="hljs-title">class</span> <span class="hljs-title">ContainerProduct</span> </span>{
+    - containedProduct: Product
+    - containedQuantity: <span class="hljs-keyword">int</span>
+    + getContainedProduct(): Product
+    + getContainedQuantity(): <span class="hljs-keyword">int</span>
+  }
+
+  Product &lt;|-- SimpleProduct
+  Product &lt;|-- ContainerProduct
+  Product --&gt; Brand
+  Product --&gt; ProductLine
+  ContainerProduct --&gt; Product
+}
+
+<span class="hljs-keyword">package</span> <span class="hljs-string">"application.ports"</span> {
+  <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ProductRepository</span> </span>{
+    + save(Product): <span class="hljs-keyword">void</span>
+    + existsById(String): <span class="hljs-keyword">boolean</span>
+    + findById(String): Product
+    + findAll(): List&lt;Product&gt;
+    + search(String): List&lt;Product&gt;
+    + deleteById(String): <span class="hljs-keyword">void</span>
+  }
+}
+
+<span class="hljs-keyword">package</span> <span class="hljs-string">"infrastructure"</span> {
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InMemoryProductRepository</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ProductRepository</span> </span>{
+    - productMap: Map&lt;String, Product&gt;
+  }
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ProductIdGenerator</span> </span>{
+    - lastId: <span class="hljs-keyword">int</span>
+    + generateId(): String
+    + initializeFrom(lastUsedId: <span class="hljs-keyword">int</span>): <span class="hljs-keyword">void</span>
+  }
+}
+
+<span class="hljs-keyword">package</span> <span class="hljs-string">"application"</span> {
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AddProductUseCase</span>
+  <span class="hljs-title">class</span> <span class="hljs-title">DeleteProductUseCase</span>
+  <span class="hljs-title">class</span> <span class="hljs-title">SearchProductUseCase</span> </span>{
+    + execute(keyword: String, mode: Mode): List&lt;Product&gt;
+    <span class="hljs-keyword">enum</span> Mode { ID, NAME, BOTH }
+  }
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SellProductUseCase</span>
+  <span class="hljs-title">class</span> <span class="hljs-title">SortProductsUseCase</span>
+
+  <span class="hljs-title">ProductRepository</span> &lt;|.. <span class="hljs-title">InMemoryProductRepository</span>
+  <span class="hljs-title">AddProductUseCase</span> --&gt; <span class="hljs-title">ProductRepository</span>
+  <span class="hljs-title">DeleteProductUseCase</span> --&gt; <span class="hljs-title">ProductRepository</span>
+  <span class="hljs-title">SearchProductUseCase</span> --&gt; <span class="hljs-title">ProductRepository</span>
+  <span class="hljs-title">SellProductUseCase</span> --&gt; <span class="hljs-title">ProductRepository</span>
+  <span class="hljs-title">SortProductsUseCase</span> --&gt; <span class="hljs-title">ProductRepository</span>
+}
+
+<span class="hljs-title">package</span> "<span class="hljs-title">presentation</span>" </span>{
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ConsoleInterface</span> </span>{
+    - scanner: Scanner
+    - repository: ProductRepository
+    - catalog: Catalog
+  }
+
+  ConsoleInterface --&gt; AddProductUseCase
+  ConsoleInterface --&gt; DeleteProductUseCase
+  ConsoleInterface --&gt; SellProductUseCase
+  ConsoleInterface --&gt; SearchProductUseCase
+  ConsoleInterface --&gt; SortProductsUseCase
+  ConsoleInterface --&gt; Catalog
+}
+<span class="hljs-meta">@enduml</span>
+</div></code></pre>
+<p><strong>Principales entités :</strong></p>
+<ul>
+<li><code>Product</code> (classe abstraite) : Représente un produit générique.</li>
+<li><code>SimpleProduct</code>, <code>ContainerProduct</code> : Spécialisations de produit.</li>
+<li><code>Brand</code>, <code>ProductLine</code> : Métadonnées liées à l'organisation du catalogue.</li>
+<li><code>Catalog</code> : Gère la création de marques et de gammes.</li>
+<li><code>ProductRepository</code> : Interface pour le stockage.</li>
+<li><code>InMemoryProductRepository</code> : Implémentation mémoire.</li>
+<li><code>ProductIdGenerator</code> : Fournit des identifiants uniques.</li>
+</ul>
+<hr>
+<h2 id="2-diagramme-de-s%C3%A9quence">2. Diagramme de Séquence</h2>
+<h3 id="a-ce-diagramme-illustre-le-sc%C3%A9nario-dajout-dun-produit-par-lutilisateur-via-linterface-console">A. Ce diagramme illustre le scénario d’<strong>ajout d’un produit</strong> par l’utilisateur via l’interface console.</h3>
+<p><img src="img/DSequ_AddProduct.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-meta">@startuml</span>
+actor Utilisateur
+participant ConsoleInterface
+participant ProductIdGenerator
+participant Catalog
+participant AddProductUseCase
+participant InMemoryProductRepository
+
+Utilisateur -&gt; ConsoleInterface: start()
+Utilisateur -&gt; ConsoleInterface: ajouterProduit()
+ConsoleInterface -&gt; ProductIdGenerator: generateId()
+ProductIdGenerator --&gt; ConsoleInterface: id
+
+ConsoleInterface -&gt; Catalog: createBrand()
+Catalog --&gt; ConsoleInterface: Brand
+
+ConsoleInterface -&gt; Catalog: createProductLine()
+Catalog --&gt; ConsoleInterface: ProductLine
+
+ConsoleInterface -&gt; AddProductUseCase: execute(Product)
+AddProductUseCase -&gt; InMemoryProductRepository: existsById(id)
+InMemoryProductRepository --&gt; AddProductUseCase: <span class="hljs-keyword">false</span>
+AddProductUseCase -&gt; InMemoryProductRepository: save(product)
+InMemoryProductRepository --&gt; AddProductUseCase
+AddProductUseCase --&gt; ConsoleInterface
+
+ConsoleInterface --&gt; Utilisateur: Produit ajouté avec succès
+<span class="hljs-meta">@enduml</span>
+</div></code></pre>
+<p><strong>Scénario représenté :</strong></p>
+<ol>
+<li>L'utilisateur saisit les informations du produit.</li>
+<li>L’interface appelle le cas d’usage <code>AddProductUseCase</code>.</li>
+<li>Ce dernier vérifie l’existence dans le <code>ProductRepository</code>.</li>
+<li>Le produit est sauvegardé et un message de confirmation est retourné.</li>
+</ol>
+<hr>
+<h3 id="b-ce-diagramme-illustre-le-sc%C3%A9nario-de-vente-dun-produit-par-lutilisateur-via-linterface-console">B. Ce diagramme illustre le scénario de <strong>vente d’un produit</strong> par l’utilisateur via l’interface console.</h3>
+<p><img src="img/DSequ_SellProduct.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-meta">@startuml</span>
+actor Utilisateur
+participant ConsoleInterface
+participant SellProductUseCase
+participant InMemoryProductRepository
+
+Utilisateur -&gt; ConsoleInterface: vendreProduit()
+ConsoleInterface -&gt; SellProductUseCase: execute(id, quantité)
+
+SellProductUseCase -&gt; InMemoryProductRepository: existsById(id)
+InMemoryProductRepository --&gt; SellProductUseCase: <span class="hljs-keyword">true</span>
+
+SellProductUseCase -&gt; InMemoryProductRepository: findById(id)
+InMemoryProductRepository --&gt; SellProductUseCase: Product
+
+SellProductUseCase -&gt; InMemoryProductRepository: save(updatedProduct)
+SellProductUseCase --&gt; ConsoleInterface
+ConsoleInterface --&gt; Utilisateur: Confirmation de vente
+<span class="hljs-meta">@enduml</span>
+</div></code></pre>
+<p><strong>Scénario représenté :</strong></p>
+<ol>
+<li>L'utilisateur sélectionne un produit à vendre et entre une quantité.</li>
+<li>L’interface appelle le cas d’usage <code>SellProductUseCase</code>.</li>
+<li>Ce dernier vérifie l’existence du produit dans le <code>ProductRepository</code>.</li>
+<li>Il vérifie que la quantité en stock est suffisante.</li>
+<li>Le stock est mis à jour et le produit est sauvegardé.</li>
+<li>Un message de confirmation est retourné à l’utilisateur.</li>
+</ol>
+<hr>
+<h3 id="c-ce-diagramme-illustre-le-sc%C3%A9nario-de-suppression-dun-produit-par-lutilisateur-via-linterface-console">C. Ce diagramme illustre le scénario de <strong>suppression d’un produit</strong> par l’utilisateur via l’interface console.</h3>
+<p><img src="img/DSequ_DelProduct.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-meta">@startuml</span>
+actor Utilisateur
+participant ConsoleInterface
+participant DeleteProductUseCase
+participant InMemoryProductRepository
+
+Utilisateur -&gt; ConsoleInterface: supprimerProduit()
+ConsoleInterface -&gt; DeleteProductUseCase: execute(id)
+
+DeleteProductUseCase -&gt; InMemoryProductRepository: existsById(id)
+InMemoryProductRepository --&gt; DeleteProductUseCase: <span class="hljs-keyword">true</span>
+
+DeleteProductUseCase -&gt; InMemoryProductRepository: deleteById(id)
+DeleteProductUseCase --&gt; ConsoleInterface
+ConsoleInterface --&gt; Utilisateur: Produit supprimé
+<span class="hljs-meta">@enduml</span>
+</div></code></pre>
+<p><strong>Scénario représenté :</strong></p>
+<ol>
+<li>L’utilisateur sélectionne un produit à supprimer.</li>
+<li>L’interface appelle le cas d’usage <code>DeleteProductUseCase</code>.</li>
+<li>Ce dernier vérifie que l’ID fourni est valide.</li>
+<li>Il vérifie que le produit existe dans le <code>ProductRepository</code>.</li>
+<li>Si c’est le cas, il le supprime.</li>
+<li>Un message de suppression est retourné.</li>
+</ol>
+<hr>
+<h3 id="d-ce-diagramme-illustre-le-sc%C3%A9nario-de-la-recherche-dun-produit-par-lutilisateur-via-linterface-console">D. Ce diagramme illustre le scénario de la <strong>recherche d’un produit</strong> par l’utilisateur via l’interface console.</h3>
+<p><img src="img/DSequ_SearchProduct.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-meta">@startuml</span>
+actor Utilisateur
+participant ConsoleInterface
+participant SearchProductUseCase
+participant InMemoryProductRepository
+
+Utilisateur -&gt; ConsoleInterface: rechercherProduit()
+ConsoleInterface -&gt; SearchProductUseCase: execute(keyword, mode)
+
+SearchProductUseCase -&gt; InMemoryProductRepository: findAll()
+InMemoryProductRepository --&gt; SearchProductUseCase: List&lt;Product&gt;
+
+SearchProductUseCase --&gt; ConsoleInterface: résultats filtrés
+ConsoleInterface --&gt; Utilisateur: Affichage des résultats
+<span class="hljs-meta">@enduml</span>
+</div></code></pre>
+<p><strong>Scénario représenté :</strong></p>
+<ol>
+<li>L’utilisateur entre un mot-clé de recherche (ID ou nom).</li>
+<li>L’interface appelle le cas d’usage <code>SearchProductUseCase</code> avec le mode choisi.</li>
+<li>Le cas d’usage récupère tous les produits depuis le <code>ProductRepository</code>.</li>
+<li>Il filtre les produits correspondant au critère recherché.</li>
+<li>Il retourne la liste filtrée à afficher à l’utilisateur.</li>
+</ol>
+<hr>
+<h3 id="e-ce-diagramme-illustre-le-sc%C3%A9nario-du-tri-des-produits-par-lutilisateur-via-linterface-console">E. Ce diagramme illustre le scénario du <strong>tri des produits</strong> par l’utilisateur via l’interface console.</h3>
+<p><img src="img/DSequ_SortProduct.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-meta">@startuml</span>
+actor Utilisateur
+participant ConsoleInterface
+participant SortProductsUseCase
+participant InMemoryProductRepository
+
+Utilisateur -&gt; ConsoleInterface: afficherProduits()
+ConsoleInterface -&gt; SortProductsUseCase: sortByPrice()
+
+SortProductsUseCase -&gt; InMemoryProductRepository: findAll()
+InMemoryProductRepository --&gt; SortProductsUseCase: List&lt;Product&gt;
+SortProductsUseCase --&gt; ConsoleInterface: Liste triée
+ConsoleInterface --&gt; Utilisateur: Affichage trié
+<span class="hljs-meta">@enduml</span>
+</div></code></pre>
+<p><strong>Scénario représenté :</strong></p>
+<ol>
+<li>L’utilisateur demande à voir les produits triés.</li>
+<li>L’interface appelle le cas d’usage <code>SortProductsUseCase</code>.</li>
+<li>Le cas d’usage récupère tous les produits depuis le <code>ProductRepository</code>.</li>
+<li>Il les trie par prix croissant.</li>
+<li>Il retourne la liste triée pour affichage.</li>
+</ol>
+<h2 id="3-objectif-de-la-mod%C3%A9lisation-uml">3. Objectif de la Modélisation UML</h2>
+<p>Ces diagrammes permettent de :</p>
+<ul>
+<li>Structurer le système de manière claire et modulaire.</li>
+<li>Identifier les points d’entrée (use cases) et les dépendances métier.</li>
+<li>Préparer une future évolution du projet (base de données, GUI, etc.).</li>
+</ul>
+<hr>
+<p><em>Dernière mise à jour : 25 Janvier 2026</em></p>
+
+</body>
+</html>

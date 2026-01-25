@@ -1,0 +1,236 @@
+\doxysection{Référence de la classe domain.\+product.\+Product}
+\hypertarget{classdomain_1_1product_1_1_product}{}\label{classdomain_1_1product_1_1_product}\index{domain.product.Product@{domain.product.Product}}
+
+
+Représente un produit abstrait appartenant à un catalogue.  
+
+
+
+
+Graphe d\textquotesingle{}héritage de domain.\+product.\+Product\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdomain_1_1product_1_1_product__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdomain_1_1product_1_1_product_a5a1595312f818f2ba75bfc7ac2d4d422}{Product}} (String id, String name, double price, int stock, \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} brand, \mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} product\+Line)
+\begin{DoxyCompactList}\small\item\em Construit un produit générique avec validation des contraintes métier. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdomain_1_1product_1_1_product_a02adba4533632f33c0f62dca8592a920}{get\+Product\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}identifiant unique du produit. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdomain_1_1product_1_1_product_a2b5d35bdc181ae4aadd9dc21188ca8d8}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retourne le nom du produit. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdomain_1_1product_1_1_product_ab7dba8b7fa7529e93f867ab7ce7edfda}{get\+Price}} ()
+\begin{DoxyCompactList}\small\item\em Retourne le prix unitaire du produit. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdomain_1_1product_1_1_product_a63b4a0867feb6d8761be628c80951046}{get\+Stock}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la quantité en stock. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} \mbox{\hyperlink{classdomain_1_1product_1_1_product_a3f989b7cd47b684e15163909681fbba1}{get\+Brand}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la marque associée au produit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} \mbox{\hyperlink{classdomain_1_1product_1_1_product_a82233b1106551cfa6313ad31342859bc}{get\+Product\+Line}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la gamme à laquelle appartient le produit. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdomain_1_1product_1_1_product_a422dd62910ad9bbb9833c48fc589e778}{to\+String}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représente un produit abstrait appartenant à un catalogue. 
+
+Cette classe sert de base pour les types de produits concrets (ex\+: \doxylink{classdomain_1_1product_1_1_simple_product}{Simple\+Product}). Elle encapsule les propriétés communes à tous les produits \+: identifiant, nom, prix, stock, ainsi que les informations de marque et de gamme.
+
+Cette classe est abstraite et ne peut être instanciée directement.
+
+\begin{DoxyAuthor}{Auteur}
+Lucas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+
+
+\label{doc-constructors}
+\Hypertarget{classdomain_1_1product_1_1_product_doc-constructors}
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classdomain_1_1product_1_1_product_a5a1595312f818f2ba75bfc7ac2d4d422}\index{domain.product.Product@{domain.product.Product}!Product@{Product}}
+\index{Product@{Product}!domain.product.Product@{domain.product.Product}}
+\doxysubsubsection{\texorpdfstring{Product()}{Product()}}
+{\footnotesize\ttfamily \label{classdomain_1_1product_1_1_product_a5a1595312f818f2ba75bfc7ac2d4d422} 
+domain.\+product.\+Product.\+Product (\begin{DoxyParamCaption}\item[{String}]{id}{, }\item[{String}]{name}{, }\item[{double}]{price}{, }\item[{int}]{stock}{, }\item[{\mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}}}]{brand}{, }\item[{\mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}}}]{product\+Line}{}\end{DoxyParamCaption})}
+
+
+
+Construit un produit générique avec validation des contraintes métier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & identifiant unique du produit (non nul) \\
+\hline
+{\em name} & nom du produit (non nul) \\
+\hline
+{\em price} & prix unitaire du produit (\texorpdfstring{$>$}{>}= 0) \\
+\hline
+{\em stock} & quantité disponible en stock (\texorpdfstring{$>$}{>}= 0) \\
+\hline
+{\em brand} & marque à laquelle appartient le produit (non nulle) \\
+\hline
+{\em product\+Line} & gamme à laquelle appartient le produit (non nulle) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & si un paramètre est invalide \\
+\hline
+\end{DoxyExceptions}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdomain_1_1product_1_1_product_a5a1595312f818f2ba75bfc7ac2d4d422_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classdomain_1_1product_1_1_product_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classdomain_1_1product_1_1_product_a3f989b7cd47b684e15163909681fbba1}\index{domain.product.Product@{domain.product.Product}!getBrand@{getBrand}}
+\index{getBrand@{getBrand}!domain.product.Product@{domain.product.Product}}
+\doxysubsubsection{\texorpdfstring{getBrand()}{getBrand()}}
+{\footnotesize\ttfamily \label{classdomain_1_1product_1_1_product_a3f989b7cd47b684e15163909681fbba1} 
+\mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} domain.\+product.\+Product.\+get\+Brand (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retourne la marque associée au produit. 
+
+\begin{DoxyReturn}{Renvoie}
+marque 
+\end{DoxyReturn}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdomain_1_1product_1_1_product_a3f989b7cd47b684e15163909681fbba1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classdomain_1_1product_1_1_product_a2b5d35bdc181ae4aadd9dc21188ca8d8}\index{domain.product.Product@{domain.product.Product}!getName@{getName}}
+\index{getName@{getName}!domain.product.Product@{domain.product.Product}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{classdomain_1_1product_1_1_product_a2b5d35bdc181ae4aadd9dc21188ca8d8} 
+String domain.\+product.\+Product.\+get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retourne le nom du produit. 
+
+\begin{DoxyReturn}{Renvoie}
+nom du produit 
+\end{DoxyReturn}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdomain_1_1product_1_1_product_a2b5d35bdc181ae4aadd9dc21188ca8d8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classdomain_1_1product_1_1_product_ab7dba8b7fa7529e93f867ab7ce7edfda}\index{domain.product.Product@{domain.product.Product}!getPrice@{getPrice}}
+\index{getPrice@{getPrice}!domain.product.Product@{domain.product.Product}}
+\doxysubsubsection{\texorpdfstring{getPrice()}{getPrice()}}
+{\footnotesize\ttfamily \label{classdomain_1_1product_1_1_product_ab7dba8b7fa7529e93f867ab7ce7edfda} 
+double domain.\+product.\+Product.\+get\+Price (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retourne le prix unitaire du produit. 
+
+\begin{DoxyReturn}{Renvoie}
+prix du produit 
+\end{DoxyReturn}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdomain_1_1product_1_1_product_ab7dba8b7fa7529e93f867ab7ce7edfda_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classdomain_1_1product_1_1_product_a02adba4533632f33c0f62dca8592a920}\index{domain.product.Product@{domain.product.Product}!getProductId@{getProductId}}
+\index{getProductId@{getProductId}!domain.product.Product@{domain.product.Product}}
+\doxysubsubsection{\texorpdfstring{getProductId()}{getProductId()}}
+{\footnotesize\ttfamily \label{classdomain_1_1product_1_1_product_a02adba4533632f33c0f62dca8592a920} 
+String domain.\+product.\+Product.\+get\+Product\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}identifiant unique du produit. 
+
+\begin{DoxyReturn}{Renvoie}
+identifiant du produit 
+\end{DoxyReturn}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdomain_1_1product_1_1_product_a02adba4533632f33c0f62dca8592a920_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classdomain_1_1product_1_1_product_a82233b1106551cfa6313ad31342859bc}\index{domain.product.Product@{domain.product.Product}!getProductLine@{getProductLine}}
+\index{getProductLine@{getProductLine}!domain.product.Product@{domain.product.Product}}
+\doxysubsubsection{\texorpdfstring{getProductLine()}{getProductLine()}}
+{\footnotesize\ttfamily \label{classdomain_1_1product_1_1_product_a82233b1106551cfa6313ad31342859bc} 
+\mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} domain.\+product.\+Product.\+get\+Product\+Line (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retourne la gamme à laquelle appartient le produit. 
+
+\begin{DoxyReturn}{Renvoie}
+gamme 
+\end{DoxyReturn}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdomain_1_1product_1_1_product_a82233b1106551cfa6313ad31342859bc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classdomain_1_1product_1_1_product_a63b4a0867feb6d8761be628c80951046}\index{domain.product.Product@{domain.product.Product}!getStock@{getStock}}
+\index{getStock@{getStock}!domain.product.Product@{domain.product.Product}}
+\doxysubsubsection{\texorpdfstring{getStock()}{getStock()}}
+{\footnotesize\ttfamily \label{classdomain_1_1product_1_1_product_a63b4a0867feb6d8761be628c80951046} 
+int domain.\+product.\+Product.\+get\+Stock (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retourne la quantité en stock. 
+
+\begin{DoxyReturn}{Renvoie}
+stock actuel 
+\end{DoxyReturn}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdomain_1_1product_1_1_product_a63b4a0867feb6d8761be628c80951046_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classdomain_1_1product_1_1_product_a422dd62910ad9bbb9833c48fc589e778}\index{domain.product.Product@{domain.product.Product}!toString@{toString}}
+\index{toString@{toString}!domain.product.Product@{domain.product.Product}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{classdomain_1_1product_1_1_product_a422dd62910ad9bbb9833c48fc589e778} 
+String domain.\+product.\+Product.\+to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/domain/product/\mbox{\hyperlink{_product_8java}{Product.\+java}}\end{DoxyCompactItemize}

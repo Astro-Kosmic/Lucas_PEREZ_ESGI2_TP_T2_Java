@@ -14,7 +14,7 @@ GENERATE_HTML          = YES
 HTML_OUTPUT            = html
 
 # Génération LaTeX désactivée
-GENERATE_LATEX         = NO
+GENERATE_LATEX         = YES
 
 # Langue des messages
 OUTPUT_LANGUAGE        = French

@@ -1,0 +1,89 @@
+\doxysection{Référence de la classe application.\+Sell\+Product\+Use\+Case}
+\hypertarget{classapplication_1_1_sell_product_use_case}{}\label{classapplication_1_1_sell_product_use_case}\index{application.SellProductUseCase@{application.SellProductUseCase}}
+
+
+Cas d\textquotesingle{}usage \+: Vendre un produit du stock.  
+
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classapplication_1_1_sell_product_use_case_ae4714ef01bc700c06271cbc1dbf29b30}{Sell\+Product\+Use\+Case}} (\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}} product\+Repository)
+\begin{DoxyCompactList}\small\item\em Constructeur du cas d\textquotesingle{}utilisation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classapplication_1_1_sell_product_use_case_a8c21a7819025a9d1c89fa189134fdfe3}{execute}} (String product\+Id, int quantity)
+\begin{DoxyCompactList}\small\item\em Exécute la vente d\textquotesingle{}un produit en diminuant son stock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Cas d\textquotesingle{}usage \+: Vendre un produit du stock. 
+
+Ce cas d\textquotesingle{}utilisation vérifie que le produit existe, que la quantité demandée est disponible, et met à jour le stock après la vente.
+
+Ce comportement est atomique et garantit l\textquotesingle{}intégrité du stock.
+
+\begin{DoxyAuthor}{Auteur}
+Lucas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+2 
+\end{DoxyVersion}
+
+
+\label{doc-constructors}
+\Hypertarget{classapplication_1_1_sell_product_use_case_doc-constructors}
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classapplication_1_1_sell_product_use_case_ae4714ef01bc700c06271cbc1dbf29b30}\index{application.SellProductUseCase@{application.SellProductUseCase}!SellProductUseCase@{SellProductUseCase}}
+\index{SellProductUseCase@{SellProductUseCase}!application.SellProductUseCase@{application.SellProductUseCase}}
+\doxysubsubsection{\texorpdfstring{SellProductUseCase()}{SellProductUseCase()}}
+{\footnotesize\ttfamily \label{classapplication_1_1_sell_product_use_case_ae4714ef01bc700c06271cbc1dbf29b30} 
+application.\+Sell\+Product\+Use\+Case.\+Sell\+Product\+Use\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}}}]{product\+Repository}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur du cas d\textquotesingle{}utilisation. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em product\+Repository} & Référentiel des produits (port d\textquotesingle{}accès aux données) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classapplication_1_1_sell_product_use_case_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classapplication_1_1_sell_product_use_case_a8c21a7819025a9d1c89fa189134fdfe3}\index{application.SellProductUseCase@{application.SellProductUseCase}!execute@{execute}}
+\index{execute@{execute}!application.SellProductUseCase@{application.SellProductUseCase}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{classapplication_1_1_sell_product_use_case_a8c21a7819025a9d1c89fa189134fdfe3} 
+void application.\+Sell\+Product\+Use\+Case.\+execute (\begin{DoxyParamCaption}\item[{String}]{product\+Id}{, }\item[{int}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Exécute la vente d\textquotesingle{}un produit en diminuant son stock. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em product\+Id} & Identifiant du produit à vendre \\
+\hline
+{\em quantity} & Quantité à vendre (doit être strictement positive) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\+Argument\+Exception} & si l\textquotesingle{}identifiant est inconnu, si le stock est insuffisant ou si la quantité demandée est invalide \\
+\hline
+\end{DoxyExceptions}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapplication_1_1_sell_product_use_case_a8c21a7819025a9d1c89fa189134fdfe3_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/application/\mbox{\hyperlink{_sell_product_use_case_8java}{Sell\+Product\+Use\+Case.\+java}}\end{DoxyCompactItemize}

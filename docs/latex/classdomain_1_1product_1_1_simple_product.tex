@@ -1,0 +1,101 @@
+\doxysection{Référence de la classe domain.\+product.\+Simple\+Product}
+\hypertarget{classdomain_1_1product_1_1_simple_product}{}\label{classdomain_1_1product_1_1_simple_product}\index{domain.product.SimpleProduct@{domain.product.SimpleProduct}}
+
+
+Représente un produit simple du catalogue.  
+
+
+
+
+Graphe d\textquotesingle{}héritage de domain.\+product.\+Simple\+Product\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classdomain_1_1product_1_1_simple_product__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de domain.\+product.\+Simple\+Product\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classdomain_1_1product_1_1_simple_product__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdomain_1_1product_1_1_simple_product_a479900b4e97398f6d6b74d1c5fc714ae}{Simple\+Product}} (String id, String name, double price, int stock, \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} brand, \mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} product\+Line)
+\begin{DoxyCompactList}\small\item\em Construit une instance de produit simple avec ses attributs fondamentaux. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{classdomain_1_1product_1_1_product}{domain.\+product.\+Product}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdomain_1_1product_1_1_product_a5a1595312f818f2ba75bfc7ac2d4d422}{Product}} (String id, String name, double price, int stock, \mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} brand, \mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} product\+Line)
+\begin{DoxyCompactList}\small\item\em Construit un produit générique avec validation des contraintes métier. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdomain_1_1product_1_1_product_a02adba4533632f33c0f62dca8592a920}{get\+Product\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}identifiant unique du produit. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdomain_1_1product_1_1_product_a2b5d35bdc181ae4aadd9dc21188ca8d8}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retourne le nom du produit. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdomain_1_1product_1_1_product_ab7dba8b7fa7529e93f867ab7ce7edfda}{get\+Price}} ()
+\begin{DoxyCompactList}\small\item\em Retourne le prix unitaire du produit. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdomain_1_1product_1_1_product_a63b4a0867feb6d8761be628c80951046}{get\+Stock}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la quantité en stock. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}} \mbox{\hyperlink{classdomain_1_1product_1_1_product_a3f989b7cd47b684e15163909681fbba1}{get\+Brand}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la marque associée au produit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}} \mbox{\hyperlink{classdomain_1_1product_1_1_product_a82233b1106551cfa6313ad31342859bc}{get\+Product\+Line}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la gamme à laquelle appartient le produit. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdomain_1_1product_1_1_product_a422dd62910ad9bbb9833c48fc589e778}{to\+String}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représente un produit simple du catalogue. 
+
+Il s\textquotesingle{}agit d\textquotesingle{}un produit unitaire, non composite, dérivé de la classe abstraite {\ttfamily \doxylink{classdomain_1_1product_1_1_product}{Product}}. Ce type de produit ne contient ni sous-\/produits ni structure hiérarchique.
+
+Cette classe est utilisée pour les cas standards de gestion de stock.
+
+\begin{DoxyAuthor}{Auteur}
+Lucas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1 
+\end{DoxyVersion}
+
+
+\label{doc-constructors}
+\Hypertarget{classdomain_1_1product_1_1_simple_product_doc-constructors}
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classdomain_1_1product_1_1_simple_product_a479900b4e97398f6d6b74d1c5fc714ae}\index{domain.product.SimpleProduct@{domain.product.SimpleProduct}!SimpleProduct@{SimpleProduct}}
+\index{SimpleProduct@{SimpleProduct}!domain.product.SimpleProduct@{domain.product.SimpleProduct}}
+\doxysubsubsection{\texorpdfstring{SimpleProduct()}{SimpleProduct()}}
+{\footnotesize\ttfamily \label{classdomain_1_1product_1_1_simple_product_a479900b4e97398f6d6b74d1c5fc714ae} 
+domain.\+product.\+Simple\+Product.\+Simple\+Product (\begin{DoxyParamCaption}\item[{String}]{id}{, }\item[{String}]{name}{, }\item[{double}]{price}{, }\item[{int}]{stock}{, }\item[{\mbox{\hyperlink{classdomain_1_1catalog_1_1_brand}{Brand}}}]{brand}{, }\item[{\mbox{\hyperlink{classdomain_1_1catalog_1_1_product_line}{Product\+Line}}}]{product\+Line}{}\end{DoxyParamCaption})}
+
+
+
+Construit une instance de produit simple avec ses attributs fondamentaux. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & identifiant unique du produit \\
+\hline
+{\em name} & nom du produit \\
+\hline
+{\em price} & prix unitaire (\texorpdfstring{$>$}{>}= 0) \\
+\hline
+{\em stock} & quantité disponible (\texorpdfstring{$>$}{>}= 0) \\
+\hline
+{\em brand} & marque associée au produit (non nulle) \\
+\hline
+{\em product\+Line} & gamme à laquelle appartient le produit (non nulle) \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/domain/product/\mbox{\hyperlink{_simple_product_8java}{Simple\+Product.\+java}}\end{DoxyCompactItemize}
