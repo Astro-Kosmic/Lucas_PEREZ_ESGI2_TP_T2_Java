@@ -1,0 +1,5 @@
+<map id="application.SortProductsUseCase.sortByPrice" name="application.SortProductsUseCase.sortByPrice">
+<area shape="rect" id="Node000001" title="Trie les produits en mémoire par prix croissant." alt="" coords="5,5,169,48"/>
+<area shape="rect" id="Node000002" href="$classdomain_1_1product_1_1_product.html#ab7dba8b7fa7529e93f867ab7ce7edfda" title="Retourne le prix unitaire du produit." alt="" coords="217,5,398,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,24,204,26,198,27,169,29"/>
+</map>

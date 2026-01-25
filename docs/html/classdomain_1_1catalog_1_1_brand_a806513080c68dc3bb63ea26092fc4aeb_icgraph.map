@@ -1,0 +1,5 @@
+<map id="domain.catalog.Brand.Brand" name="domain.catalog.Brand.Brand">
+<area shape="rect" id="Node000001" title="Construit une instance de Brand avec un identifiant et un nom." alt="" coords="243,5,428,32"/>
+<area shape="rect" id="Node000002" href="$classdomain_1_1catalog_1_1_brand.html#ac514351c95e9826c1315d092fe7312a0" title="Vérifie l&#39;égalité entre deux marques sur la base de leur identifiant." alt="" coords="5,5,195,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,19,195,21,195,16,229,19"/>
+</map>

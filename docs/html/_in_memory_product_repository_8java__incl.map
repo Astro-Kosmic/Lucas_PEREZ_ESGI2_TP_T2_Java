@@ -1,0 +1,9 @@
+<map id="src/infrastructure/InMemoryProductRepository.java" name="src/infrastructure/InMemoryProductRepository.java">
+<area shape="rect" id="Node000001" title=" " alt="" coords="166,5,384,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,171,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,48,146,92,144,87,228,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="195,104,354,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="277,46,277,90,272,87,273,50"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="378,104,454,131"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="309,46,385,95,380,95,307,51"/>
+</map>

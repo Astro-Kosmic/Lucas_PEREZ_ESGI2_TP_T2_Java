@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gestion de Stock: Référence de la classe domain.catalog.Catalog</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gestion de Stock<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classdomain_1_1catalog_1_1_catalog.html','','classdomain_1_1catalog_1_1_catalog-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Référence de la classe domain.catalog.Catalog</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Fournit un registre centralisé pour la gestion des marques (<code><a class="el" href="classdomain_1_1catalog_1_1_brand.html">Brand</a></code>) et des gammes de produits (<code><a class="el" href="classdomain_1_1catalog_1_1_product_line.html">ProductLine</a></code>).  
+ <a href="#details">Plus de détails...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a787ad5c2d4d122b9a2986725a4d2631f" id="r_a787ad5c2d4d122b9a2986725a4d2631f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdomain_1_1catalog_1_1_brand.html">Brand</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a787ad5c2d4d122b9a2986725a4d2631f">createBrand</a> (String id, String name)</td></tr>
+<tr class="memdesc:a787ad5c2d4d122b9a2986725a4d2631f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée une marque si elle n'existe pas encore dans le registre.  <br /></td></tr>
+<tr class="memitem:a8b116b141e8055b7004aec91d2696cf7" id="r_a8b116b141e8055b7004aec91d2696cf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdomain_1_1catalog_1_1_product_line.html">ProductLine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b116b141e8055b7004aec91d2696cf7">createProductLine</a> (String lineId, String name, <a class="el" href="classdomain_1_1catalog_1_1_brand.html">Brand</a> brand)</td></tr>
+<tr class="memdesc:a8b116b141e8055b7004aec91d2696cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée une gamme de produits rattachée à une marque si elle n'existe pas déjà.  <br /></td></tr>
+<tr class="memitem:aac66cb98fc8b57e5613dedcfb2530ad1" id="r_aac66cb98fc8b57e5613dedcfb2530ad1"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classdomain_1_1catalog_1_1_brand.html">Brand</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac66cb98fc8b57e5613dedcfb2530ad1">getAllBrands</a> ()</td></tr>
+<tr class="memdesc:aac66cb98fc8b57e5613dedcfb2530ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne toutes les marques actuellement enregistrées dans le catalogue.  <br /></td></tr>
+<tr class="memitem:a72bef5071a9fdad24e985e7b2e72376a" id="r_a72bef5071a9fdad24e985e7b2e72376a"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classdomain_1_1catalog_1_1_product_line.html">ProductLine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72bef5071a9fdad24e985e7b2e72376a">getAllProductLines</a> ()</td></tr>
+<tr class="memdesc:a72bef5071a9fdad24e985e7b2e72376a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne toutes les gammes de produits enregistrées.  <br /></td></tr>
+<tr class="memitem:aa165acd956800084c2ff1fdc2baff2d4" id="r_aa165acd956800084c2ff1fdc2baff2d4"><td class="memItemLeft" align="right" valign="top">Optional&lt; <a class="el" href="classdomain_1_1catalog_1_1_brand.html">Brand</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa165acd956800084c2ff1fdc2baff2d4">findBrandById</a> (String id)</td></tr>
+<tr class="memdesc:aa165acd956800084c2ff1fdc2baff2d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recherche une marque à partir de son identifiant.  <br /></td></tr>
+<tr class="memitem:a5bb1eb9c9aef963eea144825ec1d4d82" id="r_a5bb1eb9c9aef963eea144825ec1d4d82"><td class="memItemLeft" align="right" valign="top">Optional&lt; <a class="el" href="classdomain_1_1catalog_1_1_product_line.html">ProductLine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bb1eb9c9aef963eea144825ec1d4d82">findProductLineById</a> (String id)</td></tr>
+<tr class="memdesc:a5bb1eb9c9aef963eea144825ec1d4d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recherche une gamme à partir de son identifiant.  <br /></td></tr>
+<tr class="memitem:af157dc06dbb9b227435f338ad2811245" id="r_af157dc06dbb9b227435f338ad2811245"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classdomain_1_1catalog_1_1_product_line.html">ProductLine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af157dc06dbb9b227435f338ad2811245">findLinesByBrand</a> (<a class="el" href="classdomain_1_1catalog_1_1_brand.html">Brand</a> brand)</td></tr>
+<tr class="memdesc:af157dc06dbb9b227435f338ad2811245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne toutes les gammes associées à une marque donnée.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Fournit un registre centralisé pour la gestion des marques (<code><a class="el" href="classdomain_1_1catalog_1_1_brand.html">Brand</a></code>) et des gammes de produits (<code><a class="el" href="classdomain_1_1catalog_1_1_product_line.html">ProductLine</a></code>). </p>
+<p>Ce composant encapsule la logique de création, d'accès et de regroupement des entités métier liées au catalogue produit. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Lucas </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.2 </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentation des fonctions membres</h2>
+<a id="a787ad5c2d4d122b9a2986725a4d2631f" name="a787ad5c2d4d122b9a2986725a4d2631f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a787ad5c2d4d122b9a2986725a4d2631f">&#9670;&#160;</a></span>createBrand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdomain_1_1catalog_1_1_brand.html">Brand</a> domain.catalog.Catalog.createBrand </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crée une marque si elle n'existe pas encore dans le registre. </p>
+<p>Deux marques avec le même identifiant sont considérées comme identiques. Cette méthode est idempotente.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>identifiant unique de la marque </td></tr>
+    <tr><td class="paramname">name</td><td>nom lisible de la marque </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la marque existante ou nouvellement créée </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalArgumentException</td><td>si l'identifiant est nul </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8b116b141e8055b7004aec91d2696cf7" name="a8b116b141e8055b7004aec91d2696cf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b116b141e8055b7004aec91d2696cf7">&#9670;&#160;</a></span>createProductLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdomain_1_1catalog_1_1_product_line.html">ProductLine</a> domain.catalog.Catalog.createProductLine </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>lineId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdomain_1_1catalog_1_1_brand.html">Brand</a></td>          <td class="paramname"><span class="paramname"><em>brand</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crée une gamme de produits rattachée à une marque si elle n'existe pas déjà. </p>
+<p>Deux gammes avec le même identifiant sont considérées comme identiques. Cette méthode est idempotente.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lineId</td><td>identifiant unique de la gamme </td></tr>
+    <tr><td class="paramname">name</td><td>nom de la gamme </td></tr>
+    <tr><td class="paramname">brand</td><td>marque associée </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la gamme existante ou nouvellement créée </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalArgumentException</td><td>si l'identifiant ou la marque sont nuls </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa165acd956800084c2ff1fdc2baff2d4" name="aa165acd956800084c2ff1fdc2baff2d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa165acd956800084c2ff1fdc2baff2d4">&#9670;&#160;</a></span>findBrandById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; <a class="el" href="classdomain_1_1catalog_1_1_brand.html">Brand</a> &gt; domain.catalog.Catalog.findBrandById </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recherche une marque à partir de son identifiant. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>identifiant de la marque </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un Optional contenant la marque si elle est trouvée </dd></dl>
+
+</div>
+</div>
+<a id="af157dc06dbb9b227435f338ad2811245" name="af157dc06dbb9b227435f338ad2811245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af157dc06dbb9b227435f338ad2811245">&#9670;&#160;</a></span>findLinesByBrand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="classdomain_1_1catalog_1_1_product_line.html">ProductLine</a> &gt; domain.catalog.Catalog.findLinesByBrand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdomain_1_1catalog_1_1_brand.html">Brand</a></td>          <td class="paramname"><span class="paramname"><em>brand</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne toutes les gammes associées à une marque donnée. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brand</td><td>instance de la marque cible </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>liste des gammes rattachées à cette marque </dd></dl>
+
+</div>
+</div>
+<a id="a5bb1eb9c9aef963eea144825ec1d4d82" name="a5bb1eb9c9aef963eea144825ec1d4d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb1eb9c9aef963eea144825ec1d4d82">&#9670;&#160;</a></span>findProductLineById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Optional&lt; <a class="el" href="classdomain_1_1catalog_1_1_product_line.html">ProductLine</a> &gt; domain.catalog.Catalog.findProductLineById </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recherche une gamme à partir de son identifiant. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>identifiant de la gamme </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un Optional contenant la gamme si elle est trouvée </dd></dl>
+
+</div>
+</div>
+<a id="aac66cb98fc8b57e5613dedcfb2530ad1" name="aac66cb98fc8b57e5613dedcfb2530ad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac66cb98fc8b57e5613dedcfb2530ad1">&#9670;&#160;</a></span>getAllBrands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="classdomain_1_1catalog_1_1_brand.html">Brand</a> &gt; domain.catalog.Catalog.getAllBrands </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne toutes les marques actuellement enregistrées dans le catalogue. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>liste des marques </dd></dl>
+
+</div>
+</div>
+<a id="a72bef5071a9fdad24e985e7b2e72376a" name="a72bef5071a9fdad24e985e7b2e72376a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72bef5071a9fdad24e985e7b2e72376a">&#9670;&#160;</a></span>getAllProductLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="classdomain_1_1catalog_1_1_product_line.html">ProductLine</a> &gt; domain.catalog.Catalog.getAllProductLines </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne toutes les gammes de produits enregistrées. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>liste des gammes </dd></dl>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<li>src/domain/catalog/<a class="el" href="_catalog_8java.html">Catalog.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>domain</b></li><li class="navelem"><a href="namespacedomain_1_1catalog.html">catalog</a></li><li class="navelem"><a href="classdomain_1_1catalog_1_1_catalog.html">Catalog</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

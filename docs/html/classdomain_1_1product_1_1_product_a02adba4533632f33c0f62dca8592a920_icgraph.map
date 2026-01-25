@@ -1,0 +1,9 @@
+<map id="domain.product.Product.getProductId" name="domain.product.Product.getProductId">
+<area shape="rect" id="Node000001" title="Retourne l&#39;identifiant unique du produit." alt="" coords="258,72,439,115"/>
+<area shape="rect" id="Node000002" href="$classapplication_1_1_add_product_use_case.html#a8701179ffffe5aa119971baeda93e31a" title="Ajoute un produit au stock." alt="" coords="18,5,197,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,68,187,51,187,46,257,67"/>
+<area shape="rect" id="Node000003" href="$classapplication_1_1_sell_product_use_case.html#a8c21a7819025a9d1c89fa189134fdfe3" title="Exécute la vente d&#39;un produit en diminuant son stock." alt="" coords="18,72,197,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="240,94,198,96,197,91,245,93"/>
+<area shape="rect" id="Node000004" href="$classinfrastructure_1_1_in_memory_product_repository.html#a86e6c9f32e3b80b33abe9696e03eaa1d" title="Enregistre ou met à jour un produit dans le stockage." alt="" coords="5,139,210,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="257,119,188,141,187,135,252,120"/>
+</map>

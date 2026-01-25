@@ -1,0 +1,7 @@
+<map id="domain.product.Product.Product" name="domain.product.Product.Product">
+<area shape="rect" id="Node000001" title="Construit un produit générique avec validation des contraintes métier." alt="" coords="246,47,454,73"/>
+<area shape="rect" id="Node000002" href="$classdomain_1_1product_1_1_container_product.html#aa771e7407bf9945d096be952153160b0" title="Construit un produit conteneur avec son contenu et ses attributs de base." alt="" coords="16,5,187,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,45,188,41,188,36,233,43"/>
+<area shape="rect" id="Node000003" href="$classdomain_1_1product_1_1_container_product.html#a76f9ed3a912aa81bb442c78d307be171" title="Retourne le produit contenu dans ce conteneur." alt="" coords="5,72,198,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,76,199,83,198,78,233,76"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="Node000000" href="$classdomain_1_1product_1_1_product.html" title="Représente un produit abstrait appartenant à un catalogue." alt="" coords="5,43,165,69"/>
+<area shape="rect" id="Node000001" href="$classdomain_1_1product_1_1_container_product.html" title="Représente un produit conteneur, c’est&#45;à&#45;dire un produit composé qui contient une certaine quantité d..." alt="" coords="227,5,398,48"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="179,41,229,37,224,38,180,46"/>
+<area shape="rect" id="Node000002" href="$classdomain_1_1product_1_1_simple_product.html" title="Représente un produit simple du catalogue." alt="" coords="213,72,412,99"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="180,66,215,72,210,73,180,71"/>
+</map>

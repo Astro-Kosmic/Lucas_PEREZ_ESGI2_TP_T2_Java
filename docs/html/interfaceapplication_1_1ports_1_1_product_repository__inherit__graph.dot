@@ -1,0 +1,10 @@
+digraph "application.ports.ProductRepository"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="application.ports.Product\lRepository",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Interface représentant le port d'accès aux données des produits."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="infrastructure.InMemoryProduct\lRepository",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classinfrastructure_1_1_in_memory_product_repository.html",tooltip="Implémentation en mémoire de l'interface ProductRepository."];
+}

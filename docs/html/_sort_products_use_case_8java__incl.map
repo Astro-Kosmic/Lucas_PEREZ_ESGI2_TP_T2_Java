@@ -1,0 +1,13 @@
+<map id="src/application/SortProductsUseCase.java" name="src/application/SortProductsUseCase.java">
+<area shape="rect" id="Node000001" title=" " alt="" coords="347,5,533,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,171,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="355,50,186,94,185,89,360,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="195,104,354,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="404,48,313,99,311,94,399,49"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="379,104,501,131"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="442,47,442,90,438,87,438,50"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="526,104,664,131"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="477,46,562,96,557,96,476,51"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="688,104,779,131"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="516,46,677,93,687,99,681,98,675,99,515,51"/>
+</map>

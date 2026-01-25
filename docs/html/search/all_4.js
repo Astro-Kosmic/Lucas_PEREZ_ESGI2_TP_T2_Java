@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['equals_0',['equals',['../classdomain_1_1catalog_1_1_brand.html#ac514351c95e9826c1315d092fe7312a0',1,'domain.catalog.Brand.equals()'],['../classdomain_1_1catalog_1_1_product_line.html#a12119428df8795be1ce905b4734c65ad',1,'domain.catalog.ProductLine.equals()']]],
+  ['execute_1',['execute',['../classapplication_1_1_add_product_use_case.html#a8701179ffffe5aa119971baeda93e31a',1,'application.AddProductUseCase.execute()'],['../classapplication_1_1_delete_product_use_case.html#a8c9976f3e4ddd0a91fdf3cf038e1bd24',1,'application.DeleteProductUseCase.execute()'],['../classapplication_1_1_search_product_use_case.html#aea9263b9de2f20cfd6b8a6a204df9044',1,'application.SearchProductUseCase.execute()'],['../classapplication_1_1_sell_product_use_case.html#a8c21a7819025a9d1c89fa189134fdfe3',1,'application.SellProductUseCase.execute()']]],
+  ['existsbyid_2',['existsById',['../interfaceapplication_1_1ports_1_1_product_repository.html#ac75696af365abea42a16d0b21d78a8cc',1,'application.ports.ProductRepository.existsById()'],['../classinfrastructure_1_1_in_memory_product_repository.html#a70a2c5309722ca5c33b605a3e59cf9e1',1,'infrastructure.InMemoryProductRepository.existsById()']]]
+];

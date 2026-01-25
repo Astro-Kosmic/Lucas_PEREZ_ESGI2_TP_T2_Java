@@ -1,0 +1,55 @@
+# Doxyfile 1.9.4
+
+# Dossier racine contenant le code source
+INPUT                  = ./src
+
+# Répertoire de sortie de la documentation
+OUTPUT_DIRECTORY       = ./docs
+
+# Inclure les sous-dossiers
+RECURSIVE              = YES
+
+# Génération HTML activée
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+
+# Génération LaTeX désactivée
+GENERATE_LATEX         = NO
+
+# Langue des messages
+OUTPUT_LANGUAGE        = French
+
+# Extraire toute la documentation (même sans commentaires explicites)
+EXTRACT_ALL            = YES
+
+# Inclure les commentaires de type javadoc
+JAVADOC_AUTOBRIEF      = YES
+
+# Inclure les noms des fichiers dans les pages de documentation
+FULL_PATH_NAMES        = YES
+
+# Ne pas documenter les fichiers sans documentation
+HIDE_UNDOC_MEMBERS     = NO
+HIDE_UNDOC_CLASSES     = NO
+
+# Autoriser la documentation des classes Java
+OPTIMIZE_OUTPUT_JAVA   = YES
+
+# Autoriser les balises Markdown
+MARKDOWN_SUPPORT       = YES
+
+# Nom du projet
+PROJECT_NAME           = "Gestion de Stock"
+
+# Numéro de version
+PROJECT_NUMBER         = "1.0"
+
+# Définir les fichiers d'extension reconnus
+FILE_PATTERNS          = *.java
+
+# Utiliser des graphiques (si Graphviz est installé)
+HAVE_DOT               = YES
+DOT_IMAGE_FORMAT       = svg
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+CLASS_DIAGRAMS         = YES

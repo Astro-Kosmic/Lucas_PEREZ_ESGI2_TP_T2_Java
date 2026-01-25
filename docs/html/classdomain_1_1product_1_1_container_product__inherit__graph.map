@@ -1,0 +1,5 @@
+<map id="domain.product.ContainerProduct" name="domain.product.ContainerProduct">
+<area shape="rect" id="Node000001" title="Représente un produit conteneur, c’est&#45;à&#45;dire un produit composé qui contient une certaine quantité d..." alt="" coords="5,80,176,123"/>
+<area shape="rect" id="Node000002" href="$classdomain_1_1product_1_1_product.html" title="Représente un produit abstrait appartenant à un catalogue." alt="" coords="11,5,170,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,46,93,81,88,79,89,50"/>
+</map>

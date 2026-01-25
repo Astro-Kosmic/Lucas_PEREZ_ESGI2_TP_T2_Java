@@ -1,0 +1,13 @@
+<map id="src/application/AddProductUseCase.java" name="src/application/AddProductUseCase.java">
+<area shape="rect" id="Node000001" title=" " alt="" coords="369,5,546,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,171,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="371,51,186,95,185,90,371,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="194,104,342,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="416,48,310,100,308,95,410,49"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="366,104,548,131"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="459,47,459,90,455,87,455,50"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="572,104,732,131"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="504,46,613,97,608,97,502,51"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="756,104,956,131"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="547,45,786,100,781,100,546,50"/>
+</map>

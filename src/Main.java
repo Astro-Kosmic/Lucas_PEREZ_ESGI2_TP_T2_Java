@@ -1,13 +1,27 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import presentation.ConsoleInterface;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+/**
+ * Point d'entrée de l'application de gestion de stock.
+ * Lance l'interface en ligne de commande permettant les opérations
+ * de consultation et de modification du catalogue produit.
+ *
+ * Cette classe initialise le contrôleur principal.
+ * Elle pourra également servir de point d’ancrage à d’autres interfaces
+ * futures (web, graphique, API, etc.).
+ *
+ * @author Lucas
+ * @version 1.0
+ */
+public class Main {
+
+    /**
+     * Méthode principale du programme.
+     * Initialise l'interface console et démarre la boucle interactive.
+     *
+     * @param args arguments passés en ligne de commande (non utilisés)
+     */
+    public static void main(String[] args) {
+        ConsoleInterface console = new ConsoleInterface();
+        console.start();
     }
 }

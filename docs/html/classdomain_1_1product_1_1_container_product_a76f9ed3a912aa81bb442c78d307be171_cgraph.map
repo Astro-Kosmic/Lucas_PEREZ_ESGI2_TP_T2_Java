@@ -1,0 +1,5 @@
+<map id="domain.product.ContainerProduct.getContainedProduct" name="domain.product.ContainerProduct.getContainedProduct">
+<area shape="rect" id="Node000001" title="Retourne le produit contenu dans ce conteneur." alt="" coords="5,5,198,48"/>
+<area shape="rect" id="Node000002" href="$classdomain_1_1product_1_1_product.html#a5a1595312f818f2ba75bfc7ac2d4d422" title="Construit un produit générique avec validation des contraintes métier." alt="" coords="246,13,454,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,24,233,26,227,27,198,29"/>
+</map>

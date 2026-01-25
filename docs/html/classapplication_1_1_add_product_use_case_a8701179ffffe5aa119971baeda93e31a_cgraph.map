@@ -1,0 +1,15 @@
+<map id="application.AddProductUseCase.execute" name="application.AddProductUseCase.execute">
+<area shape="rect" id="Node000001" title="Ajoute un produit au stock." alt="" coords="5,156,185,199"/>
+<area shape="rect" id="Node000002" href="$classdomain_1_1product_1_1_product.html#a3f989b7cd47b684e15163909681fbba1" title="Retourne la marque associée au produit." alt="" coords="250,5,432,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,154,164,106,197,80,231,58,245,53,241,56,234,62,200,84,168,110,118,157"/>
+<area shape="rect" id="Node000003" href="$classdomain_1_1product_1_1_product.html#a2b5d35bdc181ae4aadd9dc21188ca8d8" title="Retourne le nom du produit." alt="" coords="233,72,449,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,153,180,130,232,108,258,102,254,105,234,113,182,135,137,158"/>
+<area shape="rect" id="Node000004" href="$classdomain_1_1product_1_1_product.html#ab7dba8b7fa7529e93f867ab7ce7edfda" title="Retourne le prix unitaire du produit." alt="" coords="250,123,432,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="184,163,237,157,232,160,186,168"/>
+<area shape="rect" id="Node000005" href="$classdomain_1_1product_1_1_product.html#a02adba4533632f33c0f62dca8592a920" title="Retourne l&#39;identifiant unique du produit." alt="" coords="250,189,432,232"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="185,187,237,195,232,197,186,192"/>
+<area shape="rect" id="Node000006" href="$classdomain_1_1product_1_1_product.html#a82233b1106551cfa6313ad31342859bc" title="Retourne la gamme à laquelle appartient le produit." alt="" coords="250,256,432,299"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="137,196,234,242,253,250,248,251,232,246,136,202"/>
+<area shape="rect" id="Node000007" href="$classdomain_1_1product_1_1_product.html#a63b4a0867feb6d8761be628c80951046" title="Retourne la quantité en stock." alt="" coords="250,323,432,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="114,196,165,253,198,283,234,308,244,316,239,315,231,313,194,287,161,256,112,202"/>
+</map>

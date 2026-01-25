@@ -1,0 +1,5 @@
+<map id="application.ports.ProductRepository" name="application.ports.ProductRepository">
+<area shape="rect" id="Node000001" title="Interface représentant le port d&#39;accès aux données des produits." alt="" coords="25,5,190,48"/>
+<area shape="rect" id="Node000002" href="$classinfrastructure_1_1_in_memory_product_repository.html" title="Implémentation en mémoire de l&#39;interface ProductRepository." alt="" coords="5,96,210,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,62,110,97,105,95,106,66"/>
+</map>

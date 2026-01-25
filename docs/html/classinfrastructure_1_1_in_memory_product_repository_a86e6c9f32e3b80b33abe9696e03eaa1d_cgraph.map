@@ -1,0 +1,5 @@
+<map id="infrastructure.InMemoryProductRepository.save" name="infrastructure.InMemoryProductRepository.save">
+<area shape="rect" id="Node000001" title="Enregistre ou met à jour un produit dans le stockage." alt="" coords="5,5,210,48"/>
+<area shape="rect" id="Node000002" href="$classdomain_1_1product_1_1_product.html#a02adba4533632f33c0f62dca8592a920" title="Retourne l&#39;identifiant unique du produit." alt="" coords="258,5,439,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,24,244,27,239,27,210,29"/>
+</map>

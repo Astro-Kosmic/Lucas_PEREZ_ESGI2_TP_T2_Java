@@ -1,0 +1,5 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="Node000000" href="$interfaceapplication_1_1ports_1_1_product_repository.html" title="Interface représentant le port d&#39;accès aux données des produits." alt="" coords="5,5,171,48"/>
+<area shape="rect" id="Node000001" href="$classinfrastructure_1_1_in_memory_product_repository.html" title="Implémentation en mémoire de l&#39;interface ProductRepository." alt="" coords="219,5,423,48"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="186,24,221,26,216,27,186,29"/>
+</map>

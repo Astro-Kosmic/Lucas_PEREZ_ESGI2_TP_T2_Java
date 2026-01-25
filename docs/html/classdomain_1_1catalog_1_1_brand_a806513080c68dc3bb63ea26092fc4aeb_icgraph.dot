@@ -1,0 +1,11 @@
+digraph "domain.catalog.Brand.Brand"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="domain.catalog.Brand.Brand",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Construit une instance de Brand avec un identifiant et un nom."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="domain.catalog.Brand.equals",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdomain_1_1catalog_1_1_brand.html#ac514351c95e9826c1315d092fe7312a0",tooltip="Vérifie l'égalité entre deux marques sur la base de leur identifiant."];
+}
