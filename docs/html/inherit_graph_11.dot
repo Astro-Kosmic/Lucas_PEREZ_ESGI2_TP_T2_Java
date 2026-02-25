@@ -5,5 +5,5 @@ digraph "Graphe hiérarchique des classes"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="infrastructure.ProductId\lGenerator",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classinfrastructure_1_1_product_id_generator.html",tooltip="Générateur d'identifiants uniques pour les produits."];
+  Node0 [id="Node000000",label="domain.sale.CartLine",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdomain_1_1sale_1_1_cart_line.html",tooltip="Représente une ligne de panier (produit + quantité)."];
 }

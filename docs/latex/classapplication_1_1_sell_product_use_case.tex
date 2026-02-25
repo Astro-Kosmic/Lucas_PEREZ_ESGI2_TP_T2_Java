@@ -2,30 +2,42 @@
 \hypertarget{classapplication_1_1_sell_product_use_case}{}\label{classapplication_1_1_sell_product_use_case}\index{application.SellProductUseCase@{application.SellProductUseCase}}
 
 
-Cas d\textquotesingle{}usage \+: Vendre un produit du stock.  
+Cas d\textquotesingle{}usage \+: Vendre un ou plusieurs produits du stock (panier).  
 
 
 \doxysubsubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classapplication_1_1_sell_product_use_case_ae4714ef01bc700c06271cbc1dbf29b30}{Sell\+Product\+Use\+Case}} (\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}} product\+Repository)
-\begin{DoxyCompactList}\small\item\em Constructeur du cas d\textquotesingle{}utilisation. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut (règle TP2). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classapplication_1_1_sell_product_use_case_a42e3879a32c2e59218092447e6aa12d4}{Sell\+Product\+Use\+Case}} (\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}} product\+Repository, \mbox{\hyperlink{classdomain_1_1sale_1_1_discount_policy}{Discount\+Policy}} discount\+Policy)
+\begin{DoxyCompactList}\small\item\em Constructeur avec injection de policy (plus propre / testable). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classapplication_1_1_sell_product_use_case_a8c21a7819025a9d1c89fa189134fdfe3}{execute}} (String product\+Id, int quantity)
-\begin{DoxyCompactList}\small\item\em Exécute la vente d\textquotesingle{}un produit en diminuant son stock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Compatibilité TP1 \+: vend un seul produit (ancienne signature). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1sale_1_1_receipt}{Receipt}} \mbox{\hyperlink{classapplication_1_1_sell_product_use_case_a2a847baa6340d8bcd718693590f53fdf}{execute\+Cart}} (List$<$ \mbox{\hyperlink{classdomain_1_1sale_1_1_cart_line}{Cart\+Line}} $>$ cart\+Lines)
+\begin{DoxyCompactList}\small\item\em TP2 \+: Exécute une vente de type panier (max 3 articles). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
-Cas d\textquotesingle{}usage \+: Vendre un produit du stock. 
+Cas d\textquotesingle{}usage \+: Vendre un ou plusieurs produits du stock (panier). 
 
-Ce cas d\textquotesingle{}utilisation vérifie que le produit existe, que la quantité demandée est disponible, et met à jour le stock après la vente.
 
-Ce comportement est atomique et garantit l\textquotesingle{}intégrité du stock.
+\begin{DoxyItemize}
+\item Vérifie l\textquotesingle{}existence des produits
+\item Vérifie la disponibilité en stock
+\item Calcule le total du panier
+\item Applique une remise (via \doxylink{classdomain_1_1sale_1_1_discount_policy}{Discount\+Policy})
+\item Met à jour le stock
+\item Génère un ticket (\doxylink{classdomain_1_1sale_1_1_receipt}{Receipt})
+\end{DoxyItemize}
+
+La règle de remise est externalisée dans {\ttfamily \doxylink{classdomain_1_1sale_1_1_discount_policy}{domain.\+sale.\+Discount\+Policy}} afin de séparer la logique métier du cas d\textquotesingle{}utilisation et de respecter le principe Open/\+Closed (SOLID). Cela permet de modifier facilement la stratégie de remise sans changer ce Use\+Case.
 
 \begin{DoxyAuthor}{Auteur}
 Lucas 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.\+2 
+2.\+1 
 \end{DoxyVersion}
 
 
@@ -34,17 +46,36 @@ Lucas
 \doxysubsection{Documentation des constructeurs et destructeur}
 \Hypertarget{classapplication_1_1_sell_product_use_case_ae4714ef01bc700c06271cbc1dbf29b30}\index{application.SellProductUseCase@{application.SellProductUseCase}!SellProductUseCase@{SellProductUseCase}}
 \index{SellProductUseCase@{SellProductUseCase}!application.SellProductUseCase@{application.SellProductUseCase}}
-\doxysubsubsection{\texorpdfstring{SellProductUseCase()}{SellProductUseCase()}}
+\doxysubsubsection{\texorpdfstring{SellProductUseCase()}{SellProductUseCase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{classapplication_1_1_sell_product_use_case_ae4714ef01bc700c06271cbc1dbf29b30} 
 application.\+Sell\+Product\+Use\+Case.\+Sell\+Product\+Use\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}}}]{product\+Repository}{}\end{DoxyParamCaption})}
 
 
 
-Constructeur du cas d\textquotesingle{}utilisation. 
+Constructeur par défaut (règle TP2). 
+
+Remise \+: 5\% si total \texorpdfstring{$>$}{>} 20€.
 
 
 \begin{DoxyParams}{Paramètres}
 {\em product\+Repository} & Référentiel des produits (port d\textquotesingle{}accès aux données) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classapplication_1_1_sell_product_use_case_a42e3879a32c2e59218092447e6aa12d4}\index{application.SellProductUseCase@{application.SellProductUseCase}!SellProductUseCase@{SellProductUseCase}}
+\index{SellProductUseCase@{SellProductUseCase}!application.SellProductUseCase@{application.SellProductUseCase}}
+\doxysubsubsection{\texorpdfstring{SellProductUseCase()}{SellProductUseCase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classapplication_1_1_sell_product_use_case_a42e3879a32c2e59218092447e6aa12d4} 
+application.\+Sell\+Product\+Use\+Case.\+Sell\+Product\+Use\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceapplication_1_1ports_1_1_product_repository}{Product\+Repository}}}]{product\+Repository}{, }\item[{\mbox{\hyperlink{classdomain_1_1sale_1_1_discount_policy}{Discount\+Policy}}}]{discount\+Policy}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur avec injection de policy (plus propre / testable). 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em product\+Repository} & Référentiel des produits \\
+\hline
+{\em discount\+Policy} & politique de remise \\
 \hline
 \end{DoxyParams}
 
@@ -60,7 +91,7 @@ void application.\+Sell\+Product\+Use\+Case.\+execute (\begin{DoxyParamCaption}\
 
 
 
-Exécute la vente d\textquotesingle{}un produit en diminuant son stock. 
+Compatibilité TP1 \+: vend un seul produit (ancienne signature). 
 
 
 \begin{DoxyParams}{Paramètres}
@@ -69,9 +100,35 @@ Exécute la vente d\textquotesingle{}un produit en diminuant son stock.
 {\em quantity} & Quantité à vendre (doit être strictement positive) \\
 \hline
 \end{DoxyParams}
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapplication_1_1_sell_product_use_case_a8c21a7819025a9d1c89fa189134fdfe3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classapplication_1_1_sell_product_use_case_a2a847baa6340d8bcd718693590f53fdf}\index{application.SellProductUseCase@{application.SellProductUseCase}!executeCart@{executeCart}}
+\index{executeCart@{executeCart}!application.SellProductUseCase@{application.SellProductUseCase}}
+\doxysubsubsection{\texorpdfstring{executeCart()}{executeCart()}}
+{\footnotesize\ttfamily \label{classapplication_1_1_sell_product_use_case_a2a847baa6340d8bcd718693590f53fdf} 
+\mbox{\hyperlink{classdomain_1_1sale_1_1_receipt}{Receipt}} application.\+Sell\+Product\+Use\+Case.\+execute\+Cart (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classdomain_1_1sale_1_1_cart_line}{Cart\+Line}} $>$}]{cart\+Lines}{}\end{DoxyParamCaption})}
+
+
+
+TP2 \+: Exécute une vente de type panier (max 3 articles). 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em cart\+Lines} & lignes du panier (1 à 3) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+le ticket de caisse 
+\end{DoxyReturn}
 
 \begin{DoxyExceptions}{Exceptions}
-{\em Illegal\+Argument\+Exception} & si l\textquotesingle{}identifiant est inconnu, si le stock est insuffisant ou si la quantité demandée est invalide \\
+{\em Illegal\+Argument\+Exception} & si panier invalide, produit introuvable, stock insuffisant, etc. \\
 \hline
 \end{DoxyExceptions}
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
@@ -79,7 +136,15 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classapplication_1_1_sell_product_use_case_a8c21a7819025a9d1c89fa189134fdfe3_cgraph}
+\includegraphics[width=350pt]{classapplication_1_1_sell_product_use_case_a2a847baa6340d8bcd718693590f53fdf_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classapplication_1_1_sell_product_use_case_a2a847baa6340d8bcd718693590f53fdf_icgraph}
 \end{center}
 \end{figure}
 

@@ -19,6 +19,10 @@ import java.util.Scanner;
  *
  * Cette classe orchestre les cas d'utilisation métier à partir des saisies utilisateur.
  *
+ * Couche de présentation.
+ * Cette classe ne contient aucune logique métier et délègue
+ * entièrement les traitements aux UseCases applicatifs.
+ *
  * @author Lucas
  * @version 1.1
  */
@@ -101,18 +105,40 @@ public class ConsoleInterface {
     }
 
     /**
-     * Permet à l'utilisateur de vendre un produit en réduisant son stock.
+     * Permet à l'utilisateur de vendre jusqu'à 3 produits (panier),
+     * calcule le total, applique une remise éventuelle, met à jour le stock
+     * et affiche un ticket.
      */
     private void vendreProduit() {
         afficherProduits();
-        System.out.print("ID produit : ");
-        String id = scanner.nextLine();
-        System.out.print("Quantité à vendre : ");
-        int qty = Integer.parseInt(scanner.nextLine());
 
         try {
-            sellProduct.execute(id, qty);
+            List<domain.sale.CartLine> cartLines = new java.util.ArrayList<>();
+
+            for (int i = 1; i <= 3; i++) {
+                System.out.print("ID produit (" + i + "/3) : ");
+                String id = scanner.nextLine();
+
+                System.out.print("Quantité à vendre : ");
+                int qty = Integer.parseInt(scanner.nextLine());
+
+                cartLines.add(new domain.sale.CartLine(id, qty));
+
+                if (i < 3) {
+                    System.out.print("Ajouter un autre produit ? (y/n) : ");
+                    String more = scanner.nextLine();
+                    if (!more.equalsIgnoreCase("y")) {
+                        break;
+                    }
+                }
+            }
+
+            domain.sale.Receipt receipt = sellProduct.executeCart(cartLines);
             System.out.println("Vente enregistrée.");
+            System.out.println(receipt.formatForConsole());
+
+        } catch (NumberFormatException e) {
+            System.out.println("Erreur : quantité invalide (entier attendu).");
         } catch (IllegalArgumentException e) {
             System.out.println("Erreur : " + e.getMessage());
         }

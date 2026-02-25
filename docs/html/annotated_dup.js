@@ -20,6 +20,12 @@ var annotated_dup =
         [ "ContainerProduct", "classdomain_1_1product_1_1_container_product.html", "classdomain_1_1product_1_1_container_product" ],
         [ "Product", "classdomain_1_1product_1_1_product.html", "classdomain_1_1product_1_1_product" ],
         [ "SimpleProduct", "classdomain_1_1product_1_1_simple_product.html", "classdomain_1_1product_1_1_simple_product" ]
+      ] ],
+      [ "sale", "namespacedomain_1_1sale.html", [
+        [ "CartLine", "classdomain_1_1sale_1_1_cart_line.html", "classdomain_1_1sale_1_1_cart_line" ],
+        [ "DiscountPolicy", "classdomain_1_1sale_1_1_discount_policy.html", "classdomain_1_1sale_1_1_discount_policy" ],
+        [ "Receipt", "classdomain_1_1sale_1_1_receipt.html", "classdomain_1_1sale_1_1_receipt" ],
+        [ "ReceiptLine", "classdomain_1_1sale_1_1_receipt_line.html", "classdomain_1_1sale_1_1_receipt_line" ]
       ] ]
     ] ],
     [ "infrastructure", "namespaceinfrastructure.html", [

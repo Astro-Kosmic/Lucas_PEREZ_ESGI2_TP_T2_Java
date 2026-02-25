@@ -12,6 +12,7 @@ digraph "src/domain"
     dir_59e154daa71ab644ff60a4d6c4d01bbf [shape=plaintext, label="domain"];
   dir_0990caeb1516e0844940d8a57e56b4a5 [label="catalog", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_0990caeb1516e0844940d8a57e56b4a5.html",tooltip=""];
   dir_857912bec4df91050561109b9b0fb124 [label="product", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_857912bec4df91050561109b9b0fb124.html",tooltip=""];
+  dir_5251a498adf987abdf497f3ebf4568f8 [label="sale", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_5251a498adf987abdf497f3ebf4568f8.html",tooltip=""];
   }
   }
 }

@@ -92,25 +92,36 @@ $(function(){initNavTree('classapplication_1_1_sell_product_use_case.html','','c
 </div><!--header-->
 <div class="contents">
 
-<p>Cas d'usage : Vendre un produit du stock.  
+<p>Cas d'usage : Vendre un ou plusieurs produits du stock (panier).  
  <a href="#details">Plus de détails...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ae4714ef01bc700c06271cbc1dbf29b30" id="r_ae4714ef01bc700c06271cbc1dbf29b30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4714ef01bc700c06271cbc1dbf29b30">SellProductUseCase</a> (<a class="el" href="interfaceapplication_1_1ports_1_1_product_repository.html">ProductRepository</a> productRepository)</td></tr>
-<tr class="memdesc:ae4714ef01bc700c06271cbc1dbf29b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur du cas d'utilisation.  <br /></td></tr>
+<tr class="memdesc:ae4714ef01bc700c06271cbc1dbf29b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut (règle TP2).  <br /></td></tr>
+<tr class="memitem:a42e3879a32c2e59218092447e6aa12d4" id="r_a42e3879a32c2e59218092447e6aa12d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42e3879a32c2e59218092447e6aa12d4">SellProductUseCase</a> (<a class="el" href="interfaceapplication_1_1ports_1_1_product_repository.html">ProductRepository</a> productRepository, <a class="el" href="classdomain_1_1sale_1_1_discount_policy.html">DiscountPolicy</a> discountPolicy)</td></tr>
+<tr class="memdesc:a42e3879a32c2e59218092447e6aa12d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur avec injection de policy (plus propre / testable).  <br /></td></tr>
 <tr class="memitem:a8c21a7819025a9d1c89fa189134fdfe3" id="r_a8c21a7819025a9d1c89fa189134fdfe3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c21a7819025a9d1c89fa189134fdfe3">execute</a> (String productId, int quantity)</td></tr>
-<tr class="memdesc:a8c21a7819025a9d1c89fa189134fdfe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exécute la vente d'un produit en diminuant son stock.  <br /></td></tr>
+<tr class="memdesc:a8c21a7819025a9d1c89fa189134fdfe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compatibilité TP1 : vend un seul produit (ancienne signature).  <br /></td></tr>
+<tr class="memitem:a2a847baa6340d8bcd718693590f53fdf" id="r_a2a847baa6340d8bcd718693590f53fdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdomain_1_1sale_1_1_receipt.html">Receipt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a847baa6340d8bcd718693590f53fdf">executeCart</a> (List&lt; <a class="el" href="classdomain_1_1sale_1_1_cart_line.html">CartLine</a> &gt; cartLines)</td></tr>
+<tr class="memdesc:a2a847baa6340d8bcd718693590f53fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">TP2 : Exécute une vente de type panier (max 3 articles).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Cas d'usage : Vendre un produit du stock. </p>
-<p>Ce cas d'utilisation vérifie que le produit existe, que la quantité demandée est disponible, et met à jour le stock après la vente.</p>
-<p>Ce comportement est atomique et garantit l'intégrité du stock.</p>
+<div class="textblock"><p>Cas d'usage : Vendre un ou plusieurs produits du stock (panier). </p>
+<ul>
+<li>Vérifie l'existence des produits</li>
+<li>Vérifie la disponibilité en stock</li>
+<li>Calcule le total du panier</li>
+<li>Applique une remise (via <a class="el" href="classdomain_1_1sale_1_1_discount_policy.html" title="Politique de remise appliquée sur un total de panier.">DiscountPolicy</a>)</li>
+<li>Met à jour le stock</li>
+<li>Génère un ticket (<a class="el" href="classdomain_1_1sale_1_1_receipt.html" title="Ticket de caisse (résultat d&#39;une vente).">Receipt</a>)</li>
+</ul>
+<p>La règle de remise est externalisée dans <code><a class="el" href="classdomain_1_1sale_1_1_discount_policy.html">domain.sale.DiscountPolicy</a></code> afin de séparer la logique métier du cas d'utilisation et de respecter le principe Open/Closed (SOLID). Cela permet de modifier facilement la stratégie de remise sans changer ce UseCase.</p>
 <dl class="section author"><dt>Auteur</dt><dd>Lucas </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>1.2 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>2.1 </dd></dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="ae4714ef01bc700c06271cbc1dbf29b30" name="ae4714ef01bc700c06271cbc1dbf29b30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4714ef01bc700c06271cbc1dbf29b30">&#9670;&#160;</a></span>SellProductUseCase()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4714ef01bc700c06271cbc1dbf29b30">&#9670;&#160;</a></span>SellProductUseCase() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,10 +135,41 @@ Fonctions membres publiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructeur du cas d'utilisation. </p>
+<p>Constructeur par défaut (règle TP2). </p>
+<p>Remise : 5% si total &gt; 20€.</p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">productRepository</td><td>Référentiel des produits (port d'accès aux données) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a42e3879a32c2e59218092447e6aa12d4" name="a42e3879a32c2e59218092447e6aa12d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e3879a32c2e59218092447e6aa12d4">&#9670;&#160;</a></span>SellProductUseCase() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">application.SellProductUseCase.SellProductUseCase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfaceapplication_1_1ports_1_1_product_repository.html">ProductRepository</a></td>          <td class="paramname"><span class="paramname"><em>productRepository</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdomain_1_1sale_1_1_discount_policy.html">DiscountPolicy</a></td>          <td class="paramname"><span class="paramname"><em>discountPolicy</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur avec injection de policy (plus propre / testable). </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">productRepository</td><td>Référentiel des produits </td></tr>
+    <tr><td class="paramname">discountPolicy</td><td>politique de remise </td></tr>
   </table>
   </dd>
 </dl>
@@ -154,7 +196,7 @@ Fonctions membres publiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Exécute la vente d'un produit en diminuant son stock. </p>
+<p>Compatibilité TP1 : vend un seul produit (ancienne signature). </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">productId</td><td>Identifiant du produit à vendre </td></tr>
@@ -162,16 +204,52 @@ Fonctions membres publiques</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapplication_1_1_sell_product_use_case_a8c21a7819025a9d1c89fa189134fdfe3_cgraph.svg" width="680" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2a847baa6340d8bcd718693590f53fdf" name="a2a847baa6340d8bcd718693590f53fdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a847baa6340d8bcd718693590f53fdf">&#9670;&#160;</a></span>executeCart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdomain_1_1sale_1_1_receipt.html">Receipt</a> application.SellProductUseCase.executeCart </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="classdomain_1_1sale_1_1_cart_line.html">CartLine</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>cartLines</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TP2 : Exécute une vente de type panier (max 3 articles). </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cartLines</td><td>lignes du panier (1 à 3) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>le ticket de caisse </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">IllegalArgumentException</td><td>si l'identifiant est inconnu, si le stock est insuffisant ou si la quantité demandée est invalide </td></tr>
+    <tr><td class="paramname">IllegalArgumentException</td><td>si panier invalide, produit introuvable, stock insuffisant, etc. </td></tr>
   </table>
   </dd>
 </dl>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapplication_1_1_sell_product_use_case_a8c21a7819025a9d1c89fa189134fdfe3_cgraph.svg" width="454" height="371"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapplication_1_1_sell_product_use_case_a2a847baa6340d8bcd718693590f53fdf_cgraph.svg" width="454" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classapplication_1_1_sell_product_use_case_a2a847baa6340d8bcd718693590f53fdf_icgraph.svg" width="416" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

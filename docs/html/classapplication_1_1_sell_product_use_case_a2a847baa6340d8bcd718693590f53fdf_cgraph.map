@@ -1,0 +1,9 @@
+<map id="application.SellProductUseCase.executeCart" name="application.SellProductUseCase.executeCart">
+<area shape="rect" id="Node000001" title="TP2 : Exécute une vente de type panier (max 3 articles)." alt="" coords="5,56,184,99"/>
+<area shape="rect" id="Node000002" href="$classdomain_1_1product_1_1_product.html#a2b5d35bdc181ae4aadd9dc21188ca8d8" title="Retourne le nom du produit." alt="" coords="232,5,448,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,53,231,41,267,35,262,37,232,47,185,58"/>
+<area shape="rect" id="Node000003" href="$classdomain_1_1product_1_1_product.html#ab7dba8b7fa7529e93f867ab7ce7edfda" title="Retourne le prix unitaire du produit." alt="" coords="249,56,430,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,75,236,77,231,78,185,80"/>
+<area shape="rect" id="Node000004" href="$classdomain_1_1product_1_1_product.html#a63b4a0867feb6d8761be628c80951046" title="Retourne la quantité en stock." alt="" coords="249,123,430,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,97,247,117,241,119,175,102"/>
+</map>

@@ -1,0 +1,89 @@
+\doxysection{Référence de la classe domain.\+sale.\+Discount\+Policy}
+\hypertarget{classdomain_1_1sale_1_1_discount_policy}{}\label{classdomain_1_1sale_1_1_discount_policy}\index{domain.sale.DiscountPolicy@{domain.sale.DiscountPolicy}}
+
+
+Politique de remise appliquée sur un total de panier.  
+
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdomain_1_1sale_1_1_discount_policy_a83bd8728cb757c0327715a50283c8d90}{Discount\+Policy}} (double threshold, double rate)
+\item 
+double \mbox{\hyperlink{classdomain_1_1sale_1_1_discount_policy_a98fd532dfaa0461d4288d6e273496569}{compute\+Discount}} (double gross\+Total)
+\begin{DoxyCompactList}\small\item\em Calcule le montant de la remise à appliquer en fonction du total brut. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdomain_1_1sale_1_1_discount_policy_a16e26d9fa078b1ce7aecda4b1532f016}{get\+Threshold}} ()
+\item 
+double \mbox{\hyperlink{classdomain_1_1sale_1_1_discount_policy_a88db43706642a7e60fb9045861455c15}{get\+Rate}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Politique de remise appliquée sur un total de panier. 
+
+Règle TP2 \+: 5\% de remise si total \texorpdfstring{$>$}{>} 20€.
+
+\begin{DoxyAuthor}{Auteur}
+Lucas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\label{doc-constructors}
+\Hypertarget{classdomain_1_1sale_1_1_discount_policy_doc-constructors}
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classdomain_1_1sale_1_1_discount_policy_a83bd8728cb757c0327715a50283c8d90}\index{domain.sale.DiscountPolicy@{domain.sale.DiscountPolicy}!DiscountPolicy@{DiscountPolicy}}
+\index{DiscountPolicy@{DiscountPolicy}!domain.sale.DiscountPolicy@{domain.sale.DiscountPolicy}}
+\doxysubsubsection{\texorpdfstring{DiscountPolicy()}{DiscountPolicy()}}
+{\footnotesize\ttfamily \label{classdomain_1_1sale_1_1_discount_policy_a83bd8728cb757c0327715a50283c8d90} 
+domain.\+sale.\+Discount\+Policy.\+Discount\+Policy (\begin{DoxyParamCaption}\item[{double}]{threshold}{, }\item[{double}]{rate}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em threshold} & seuil à dépasser pour appliquer la remise (ex\+: 20.\+0) \\
+\hline
+{\em rate} & taux de remise (ex\+: 0.\+05 pour 5\%) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classdomain_1_1sale_1_1_discount_policy_doc-func-members}
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classdomain_1_1sale_1_1_discount_policy_a98fd532dfaa0461d4288d6e273496569}\index{domain.sale.DiscountPolicy@{domain.sale.DiscountPolicy}!computeDiscount@{computeDiscount}}
+\index{computeDiscount@{computeDiscount}!domain.sale.DiscountPolicy@{domain.sale.DiscountPolicy}}
+\doxysubsubsection{\texorpdfstring{computeDiscount()}{computeDiscount()}}
+{\footnotesize\ttfamily \label{classdomain_1_1sale_1_1_discount_policy_a98fd532dfaa0461d4288d6e273496569} 
+double domain.\+sale.\+Discount\+Policy.\+compute\+Discount (\begin{DoxyParamCaption}\item[{double}]{gross\+Total}{}\end{DoxyParamCaption})}
+
+
+
+Calcule le montant de la remise à appliquer en fonction du total brut. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em gross\+Total} & total brut du panier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+montant de la remise 
+\end{DoxyReturn}
+\Hypertarget{classdomain_1_1sale_1_1_discount_policy_a88db43706642a7e60fb9045861455c15}\index{domain.sale.DiscountPolicy@{domain.sale.DiscountPolicy}!getRate@{getRate}}
+\index{getRate@{getRate}!domain.sale.DiscountPolicy@{domain.sale.DiscountPolicy}}
+\doxysubsubsection{\texorpdfstring{getRate()}{getRate()}}
+{\footnotesize\ttfamily \label{classdomain_1_1sale_1_1_discount_policy_a88db43706642a7e60fb9045861455c15} 
+double domain.\+sale.\+Discount\+Policy.\+get\+Rate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classdomain_1_1sale_1_1_discount_policy_a16e26d9fa078b1ce7aecda4b1532f016}\index{domain.sale.DiscountPolicy@{domain.sale.DiscountPolicy}!getThreshold@{getThreshold}}
+\index{getThreshold@{getThreshold}!domain.sale.DiscountPolicy@{domain.sale.DiscountPolicy}}
+\doxysubsubsection{\texorpdfstring{getThreshold()}{getThreshold()}}
+{\footnotesize\ttfamily \label{classdomain_1_1sale_1_1_discount_policy_a16e26d9fa078b1ce7aecda4b1532f016} 
+double domain.\+sale.\+Discount\+Policy.\+get\+Threshold (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/domain/sale/\mbox{\hyperlink{_discount_policy_8java}{Discount\+Policy.\+java}}\end{DoxyCompactItemize}

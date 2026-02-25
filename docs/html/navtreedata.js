@@ -46,7 +46,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_add_product_use_case_8java.html"
+"_add_product_use_case_8java.html",
+""
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

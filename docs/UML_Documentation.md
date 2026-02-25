@@ -69,6 +69,39 @@ package "domain.product" {
     + getProductLine(): ProductLine
   }
 
+  package "domain.sale" {
+
+  class CartLine {
+    - productId: String
+    - quantity: int
+    + getProductId(): String
+    + getQuantity(): int
+  }
+
+  class ReceiptLine {
+    - productName: String
+    - quantity: int
+    - unitPrice: double
+    - lineTotal: double
+  }
+
+  class Receipt {
+    - lines: List<ReceiptLine>
+    - grossTotal: double
+    - discountAmount: double
+    - netTotal: double
+    + formatForConsole(): String
+  }
+
+  class DiscountPolicy {
+    - threshold: double
+    - rate: double
+    + computeDiscount(grossTotal: double): double
+  }
+
+  Receipt --> ReceiptLine
+}
+
   class SimpleProduct
   class ContainerProduct {
     - containedProduct: Product
@@ -122,6 +155,9 @@ package "application" {
   DeleteProductUseCase --> ProductRepository
   SearchProductUseCase --> ProductRepository
   SellProductUseCase --> ProductRepository
+  SellProductUseCase --> CartLine
+  SellProductUseCase --> Receipt
+  SellProductUseCase --> DiscountPolicy
   SortProductsUseCase --> ProductRepository
 }
 
@@ -331,6 +367,35 @@ ConsoleInterface --> Utilisateur: Affichage trié
 4. Il les trie par prix croissant.
 5. Il retourne la liste triée pour affichage.
 
+---
+
+### F. Application de la règle commerciale (DiscountPolicy)
+
+![alt text](../img/DSequ_DiscountPolicy.png)
+
+```java
+@startuml
+participant SellProductUseCase
+participant DiscountPolicy
+
+SellProductUseCase -> DiscountPolicy: computeDiscount(totalBrut)
+alt totalBrut > 20€
+  DiscountPolicy --> SellProductUseCase: totalBrut * 0.05
+else
+  DiscountPolicy --> SellProductUseCase: 0.0
+end
+@enduml
+```
+
+**Scénario représenté :**
+
+1. L’utilisateur saisit jusqu’à 3 produits (ID + quantité) pour constituer un panier.
+2. L’interface appelle `SellProductUseCase.executeCart(...)`.
+3. Le cas d’usage charge chaque produit (findById) et vérifie le stock.
+4. Le total brut est calculé, puis une remise est appliquée via `DiscountPolicy`.
+5. Le stock est décrémenté et sauvegardé dans le repository.
+6. Un ticket (Receipt) est généré et affiché dans la console.
+
 ## 3. Objectif de la Modélisation UML
 
 Ces diagrammes permettent de :
@@ -341,4 +406,4 @@ Ces diagrammes permettent de :
 
 ---
 
-*Dernière mise à jour : 25 Janvier 2026*
+*Dernière mise à jour : 25 Février 2026*

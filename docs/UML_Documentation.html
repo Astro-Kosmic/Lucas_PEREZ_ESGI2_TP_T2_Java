@@ -427,6 +427,39 @@ Trimestre 2 – 2025/2026</p>
     + getProductLine(): ProductLine
   }
 
+  <span class="hljs-keyword">package</span> <span class="hljs-string">"domain.sale"</span> {
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CartLine</span> </span>{
+    - productId: String
+    - quantity: <span class="hljs-keyword">int</span>
+    + getProductId(): String
+    + getQuantity(): <span class="hljs-keyword">int</span>
+  }
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReceiptLine</span> </span>{
+    - productName: String
+    - quantity: <span class="hljs-keyword">int</span>
+    - unitPrice: <span class="hljs-keyword">double</span>
+    - lineTotal: <span class="hljs-keyword">double</span>
+  }
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Receipt</span> </span>{
+    - lines: List&lt;ReceiptLine&gt;
+    - grossTotal: <span class="hljs-keyword">double</span>
+    - discountAmount: <span class="hljs-keyword">double</span>
+    - netTotal: <span class="hljs-keyword">double</span>
+    + formatForConsole(): String
+  }
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DiscountPolicy</span> </span>{
+    - threshold: <span class="hljs-keyword">double</span>
+    - rate: <span class="hljs-keyword">double</span>
+    + computeDiscount(grossTotal: <span class="hljs-keyword">double</span>): <span class="hljs-keyword">double</span>
+  }
+
+  Receipt --&gt; ReceiptLine
+}
+
   <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SimpleProduct</span>
   <span class="hljs-title">class</span> <span class="hljs-title">ContainerProduct</span> </span>{
     - containedProduct: Product
@@ -480,6 +513,9 @@ Trimestre 2 – 2025/2026</p>
   <span class="hljs-title">DeleteProductUseCase</span> --&gt; <span class="hljs-title">ProductRepository</span>
   <span class="hljs-title">SearchProductUseCase</span> --&gt; <span class="hljs-title">ProductRepository</span>
   <span class="hljs-title">SellProductUseCase</span> --&gt; <span class="hljs-title">ProductRepository</span>
+  <span class="hljs-title">SellProductUseCase</span> --&gt; <span class="hljs-title">CartLine</span>
+  <span class="hljs-title">SellProductUseCase</span> --&gt; <span class="hljs-title">Receipt</span>
+  <span class="hljs-title">SellProductUseCase</span> --&gt; <span class="hljs-title">DiscountPolicy</span>
   <span class="hljs-title">SortProductsUseCase</span> --&gt; <span class="hljs-title">ProductRepository</span>
 }
 
@@ -663,6 +699,30 @@ ConsoleInterface --&gt; Utilisateur: Affichage trié
 <li>Il les trie par prix croissant.</li>
 <li>Il retourne la liste triée pour affichage.</li>
 </ol>
+<hr>
+<h3 id="f-application-de-la-r%C3%A8gle-commerciale-discountpolicy">F. Application de la règle commerciale (DiscountPolicy)</h3>
+<p><img src="DSequ_DiscountPolicy.png" alt="alt text"></p>
+<pre class="hljs"><code><div><span class="hljs-meta">@startuml</span>
+participant SellProductUseCase
+participant DiscountPolicy
+
+SellProductUseCase -&gt; DiscountPolicy: computeDiscount(totalBrut)
+alt totalBrut &gt; <span class="hljs-number">20</span>€
+  DiscountPolicy --&gt; SellProductUseCase: totalBrut * <span class="hljs-number">0.05</span>
+<span class="hljs-keyword">else</span>
+  DiscountPolicy --&gt; SellProductUseCase: <span class="hljs-number">0.0</span>
+end
+<span class="hljs-meta">@enduml</span>
+</div></code></pre>
+<p><strong>Scénario représenté :</strong></p>
+<ol>
+<li>L’utilisateur saisit jusqu’à 3 produits (ID + quantité) pour constituer un panier.</li>
+<li>L’interface appelle <code>SellProductUseCase.executeCart(...)</code>.</li>
+<li>Le cas d’usage charge chaque produit (findById) et vérifie le stock.</li>
+<li>Le total brut est calculé, puis une remise est appliquée via <code>DiscountPolicy</code>.</li>
+<li>Le stock est décrémenté et sauvegardé dans le repository.</li>
+<li>Un ticket (Receipt) est généré et affiché dans la console.</li>
+</ol>
 <h2 id="3-objectif-de-la-mod%C3%A9lisation-uml">3. Objectif de la Modélisation UML</h2>
 <p>Ces diagrammes permettent de :</p>
 <ul>
@@ -671,7 +731,7 @@ ConsoleInterface --&gt; Utilisateur: Affichage trié
 <li>Préparer une future évolution du projet (base de données, GUI, etc.).</li>
 </ul>
 <hr>
-<p><em>Dernière mise à jour : 25 Janvier 2026</em></p>
+<p><em>Dernière mise à jour : 25 Février 2026</em></p>
 
 </body>
 </html>
